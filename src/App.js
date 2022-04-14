@@ -1,7 +1,13 @@
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Home from './components/home/Home';
 
 const App = () => {
-  return <div>Welcome to the All-Elite Network!</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 };
 
 export default App;

@@ -1,3 +1,8 @@
 .home {
   background-color: var(--main-color);
+
+  .jumbotron {
+    width: 100%;
+    filter: brightness(50%);
+  }
 }

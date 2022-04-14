@@ -1,8 +1,16 @@
 import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
+
+  console.log(isScrolled);
   return (
     <div className='navbar'>
       <div className='container'>

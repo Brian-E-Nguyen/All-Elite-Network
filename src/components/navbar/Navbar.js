@@ -22,6 +22,10 @@ const Navbar = () => {
           <Search />
           <Notifications />
           <ArrowDropDown />
+          <div className='options'>
+            <span>Settings</span>
+            <span>Logout</span>
+          </div>
         </div>
       </div>
     </div>

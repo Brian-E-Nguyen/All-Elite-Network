@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Home from './components/home/Home';
+import Home from './views/home/Home';
 
 const App = () => {
   return (

@@ -6,7 +6,11 @@
   top: 0;
   z-index: 1000;
   background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  transition: background-color 0.3s;
 
+  &.scrolled {
+    background-color: var(--main-color);
+  }
   span {
     text-transform: uppercase;
     font-weight: 900;

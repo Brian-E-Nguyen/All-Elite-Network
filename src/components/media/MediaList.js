@@ -2,21 +2,37 @@ import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
 } from '@mui/icons-material';
+import { useRef } from 'react';
 import MediaItem from './MediaItem';
 import './MediaList.scss';
 
 const List = () => {
+  const listRef = useRef();
+  const clickHandler = (direction) => {
+    let distance = listRef.current.getBoundingClientRect().x - 50;
+    if (direction === 'left') {
+      listRef.current.style.transform = `translateX(${230 + distance}px)`;
+    } else {
+      listRef.current.style.transform = `translateX(${-230 + distance}px)`;
+    }
+  };
   return (
     <div className='media-list'>
       <span className='media-list-title'>Continue to watch</span>
       <div className='wrapper'>
-        <ArrowBackIosOutlined className='slider-arrow left' />
-        <div className='container'>
+        <ArrowBackIosOutlined
+          className='slider-arrow left'
+          onClick={() => clickHandler('left')}
+        />
+        <div className='container' ref={listRef}>
           <MediaItem />
           <MediaItem />
           <MediaItem />
         </div>
-        <ArrowForwardIosOutlined className='slider-arrow right' />
+        <ArrowForwardIosOutlined
+          className='slider-arrow right'
+          onClick={() => clickHandler('right')}
+        />
       </div>
     </div>
   );

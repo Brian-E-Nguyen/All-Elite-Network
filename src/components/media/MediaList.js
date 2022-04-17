@@ -2,17 +2,22 @@ import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
 } from '@mui/icons-material';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import MediaItem from './MediaItem';
 import './MediaList.scss';
 
 const List = () => {
+  const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef();
+
   const clickHandler = (direction) => {
     let distance = listRef.current.getBoundingClientRect().x - 50;
-    if (direction === 'left') {
+    if (direction === 'left' && slideNumber > 0) {
+      setSlideNumber((previousNumber) => previousNumber - 1);
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
-    } else {
+    }
+    if (direction === 'right' && slideNumber < 5) {
+      setSlideNumber((previousNumber) => previousNumber + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
   };

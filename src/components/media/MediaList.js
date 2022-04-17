@@ -7,16 +7,16 @@ import './MediaList.scss';
 
 const List = () => {
   return (
-    <div className='list'>
-      <span className='list-title'>Continue to watch</span>
+    <div className='media-list'>
+      <span className='media-list-title'>Continue to watch</span>
       <div className='wrapper'>
-        <ArrowBackIosOutlined />
+        <ArrowBackIosOutlined className='slider-arrow left' />
         <div className='container'>
           <MediaItem />
           <MediaItem />
           <MediaItem />
         </div>
-        <ArrowForwardIosOutlined />
+        <ArrowForwardIosOutlined className='slider-arrow right' />
       </div>
     </div>
   );

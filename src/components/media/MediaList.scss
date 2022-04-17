@@ -1,0 +1,37 @@
+.media-list {
+  width: 100%;
+  margin-top: 10px;
+
+  .media-list-title {
+    color: white;
+    margin-left: 50px;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  .wrapper {
+    position: relative;
+    .container {
+      margin-left: 50px;
+      display: flex;
+      width: max-content;
+    }
+
+    .slider-arrow {
+      width: 50px;
+      height: 100%;
+      background-color: rgb(22, 22, 22, 0.5);
+      color: white;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+    }
+  }
+}

@@ -16,22 +16,20 @@ const MediaItem = ({ index }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* TODO: props for image */}
+      {/* TODO: props for media data */}
       <img
         src='https://staticg.sportskeeda.com/editor/2022/02/d50fa-16457460219022-1920.jpg'
         alt=''
       />
+      <div className='icons'>
+        <PlayArrow className='icon' />
+        <Add className='icon' />
+        <ThumbUpAltOutlined className='icon' />
+        <ThumbDownAltOutlined className='icon' />
+      </div>
       <div className='info'>
-        <div className='icons'>
-          <PlayArrow />
-          <Add />
-          <ThumbUpAltOutlined />
-          <ThumbDownAltOutlined />
-        </div>
-        <div className='info__top'>
-          <span className='runtime'>4 hours</span>
-          <div className='date'>2022</div>
-        </div>
+        <span className='runtime'>4 hours</span>
+        <span className='date'>2022</span>
         <div className='description'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, in!
           Rerum quasi ad nam! Dolorum dolore

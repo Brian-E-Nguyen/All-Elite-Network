@@ -6,21 +6,25 @@ import { useRef, useState } from 'react';
 import MediaItem from './MediaItem';
 import './MediaList.scss';
 
-const List = () => {
+const MediaList = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef();
 
+  // FIXME: delay click handler function runs
   const clickHandler = (direction) => {
     let distance = listRef.current.getBoundingClientRect().x - 50;
     if (direction === 'left' && slideNumber > 0) {
       setSlideNumber((previousNumber) => previousNumber - 1);
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
+    // FIXME: slide number dynamic
     if (direction === 'right' && slideNumber < 5) {
       setSlideNumber((previousNumber) => previousNumber + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
   };
+
+  // TODO: props for title; map media items
   return (
     <div className='media-list'>
       <span className='media-list-title'>Continue to watch</span>
@@ -50,4 +54,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default MediaList;

@@ -1,3 +1,5 @@
+@use '../../App' as v;
+
 .media-item {
   width: 225px;
   height: 120px;
@@ -6,6 +8,7 @@
   // transition: all 0.8s ease;
   color: white;
   overflow: hidden;
+  border-radius: 5px;
   cursor: pointer;
   .info {
     .icons {
@@ -21,6 +24,8 @@
   &:hover {
     width: 320px;
     height: 300px;
+    -webkit-box-shadow: 3px 5px 15px 1px v.$elite-gold;
+    box-shadow: 3px 5px 15px 1px v.$elite-gold;
 
     img {
       height: 140px;

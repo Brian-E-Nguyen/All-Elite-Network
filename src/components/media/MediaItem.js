@@ -21,6 +21,14 @@ const MediaItem = () => {
           <ThumbUpAltOutlined />
           <ThumbDownAltOutlined />
         </div>
+        <div className='info__top'>
+          <span className='runtime'>4 hours</span>
+          <div className='date'>2022</div>
+        </div>
+        <div className='description'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, in!
+          Rerum quasi ad nam! Dolorum dolore
+        </div>
       </div>
     </div>
   );

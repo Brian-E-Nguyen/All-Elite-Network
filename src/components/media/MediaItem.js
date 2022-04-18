@@ -4,11 +4,18 @@ import {
   ThumbDownAltOutlined,
   ThumbUpAltOutlined,
 } from '@mui/icons-material';
+import { useState } from 'react';
 import './MediaItem.scss';
 
-const MediaItem = () => {
+const MediaItem = ({ index }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className='media-item'>
+    <div
+      className='media-item'
+      style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* TODO: props for image */}
       <img
         src='https://staticg.sportskeeda.com/editor/2022/02/d50fa-16457460219022-1920.jpg'

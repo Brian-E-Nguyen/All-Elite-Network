@@ -30,9 +30,16 @@ const List = () => {
           onClick={() => clickHandler('left')}
         />
         <div className='container' ref={listRef}>
-          <MediaItem />
-          <MediaItem />
-          <MediaItem />
+          <MediaItem index={0} />
+          <MediaItem index={1} />
+          <MediaItem index={2} />
+          <MediaItem index={3} />
+          <MediaItem index={4} />
+          <MediaItem index={5} />
+          <MediaItem index={6} />
+          <MediaItem index={7} />
+          <MediaItem index={8} />
+          <MediaItem index={9} />
         </div>
         <ArrowForwardIosOutlined
           className='slider-arrow right'

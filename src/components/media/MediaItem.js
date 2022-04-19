@@ -1,26 +1,26 @@
 import {
   Add,
   PlayArrow,
+  PropaneSharp,
   ThumbDownAltOutlined,
   ThumbUpAltOutlined,
 } from '@mui/icons-material';
 import { useState } from 'react';
 import './MediaItem.scss';
 
-const MediaItem = ({ index }) => {
+const MediaItem = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       className='media-item'
-      style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
+      style={{
+        left: isHovered && props.index * 225 - 50 + props.index * 2.5,
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* TODO: props for media data */}
-      <img
-        src='https://staticg.sportskeeda.com/editor/2022/02/d50fa-16457460219022-1920.jpg'
-        alt=''
-      />
+      <img src={props.data.imgSrc} alt='' />
       <div className='icons'>
         <PlayArrow className='icon' />
         <Add className='icon' />
@@ -28,12 +28,10 @@ const MediaItem = ({ index }) => {
         <ThumbDownAltOutlined className='icon' />
       </div>
       <div className='info'>
-        <span className='runtime'>4 hours</span>
-        <span className='date'>2022</span>
-        <div className='description'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, in!
-          Rerum quasi ad nam! Dolorum dolore
-        </div>
+        <h2>{props.data.title}</h2>
+        <h3 className='runtime'>{props.data.runtime}</h3>
+        <h3 className='date'>{props.data.date.toLocaleDateString()}</h3>
+        <div className='description'>{props.data.description}</div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { useRef, useState } from 'react';
 import MediaItem from './MediaItem';
 import './MediaList.scss';
 
-const MediaList = () => {
+const MediaList = (props) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef();
 
@@ -24,26 +24,21 @@ const MediaList = () => {
     }
   };
 
-  // TODO: props for title; map media items
+  console.log(props);
+
   return (
     <div className='media-list'>
-      <span className='media-list-title'>Continue to watch</span>
+      <span className='media-list-title'>{props.mediaListTitle}</span>
       <div className='wrapper'>
         <ArrowBackIosOutlined
           className='slider-arrow left'
           onClick={() => clickHandler('left')}
         />
         <div className='container' ref={listRef}>
-          <MediaItem index={0} />
-          <MediaItem index={1} />
-          <MediaItem index={2} />
-          <MediaItem index={3} />
-          <MediaItem index={4} />
-          <MediaItem index={5} />
-          <MediaItem index={6} />
-          <MediaItem index={7} />
-          <MediaItem index={8} />
-          <MediaItem index={9} />
+          {props.mediaListData.map((data, i) => (
+            <MediaItem key={i} data={data} index={i} />
+            // <h1 key={i}>{i}</h1>
+          ))}
         </div>
         <ArrowForwardIosOutlined
           className='slider-arrow right'

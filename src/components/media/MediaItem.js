@@ -1,7 +1,6 @@
 import {
   Add,
   PlayArrow,
-  PropaneSharp,
   ThumbDownAltOutlined,
   ThumbUpAltOutlined,
 } from '@mui/icons-material';
@@ -19,7 +18,6 @@ const MediaItem = (props) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* TODO: props for media data */}
       <img src={props.data.imgSrc} alt='' />
       <div className='icons'>
         <PlayArrow className='icon' />

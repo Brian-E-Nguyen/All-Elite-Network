@@ -26,4 +26,14 @@ const payperview = [
   },
 ];
 
-export { payperview };
+const dynamite = [
+  {
+    title: 'Dynamite 4/13/22',
+    runtime: '2 hours',
+    date: new Date(2022, 3, 13),
+    description: 'temp',
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650397339/All_Elite_Network/Media/Dynamite/NewOrleans_4-3-22.webp',
+  },
+];
+export { payperview, dynamite };

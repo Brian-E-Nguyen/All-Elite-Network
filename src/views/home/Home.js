@@ -8,6 +8,7 @@ import {
   dynamite,
   rampage,
   dark,
+  darkElevation,
 } from '../../helpers/MediaListData';
 const Home = () => {
   return (
@@ -18,7 +19,10 @@ const Home = () => {
       <MediaList mediaListTitle={'Dynamite'} mediaListData={dynamite} />
       <MediaList mediaListTitle={'Rampage'} mediaListData={rampage} />
       <MediaList mediaListTitle={'Dark'} mediaListData={dark} />
-      {/* <MediaList mediaListTitle={'Dark Elevation'} /> */}
+      <MediaList
+        mediaListTitle={'Dark Elevation'}
+        mediaListData={darkElevation}
+      />
       <Footer />
     </div>
   );

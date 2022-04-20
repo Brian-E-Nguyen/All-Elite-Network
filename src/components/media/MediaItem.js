@@ -26,7 +26,7 @@ const MediaItem = (props) => {
         <ThumbDownAltOutlined className='icon' />
       </div>
       <div className='info'>
-        <h2>{props.data.title}</h2>
+        <h2 className='title'>{props.data.title}</h2>
         <h3 className='runtime'>{props.data.runtime}</h3>
         <h3 className='date'>{props.data.date.toLocaleDateString()}</h3>
         <div className='description'>{props.data.description}</div>

@@ -87,4 +87,32 @@ const rampage = [
       'https://res.cloudinary.com/buraiyen/image/upload/v1650473003/All_Elite_Network/Media/Rampage/3-25-22.jpg',
   },
 ];
-export { payperview, dynamite, rampage };
+
+const dark = [
+  {
+    title: 'Dark EP. 139',
+    runtime: '44 min',
+    date: new Date(2022, 3, 19),
+    description: `6 Matches With Swerve Strickland & Keith Lee, Toni Storm, Ricky Starks & More`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650480453/All_Elite_Network/Media/Dark/4-19-22.jpg',
+  },
+  {
+    title: 'Dark EP. 138',
+    runtime: '44 min',
+    date: new Date(2022, 3, 12),
+    description: `6 Matches: Powerhouse Hobbs, Diamanté, Max Caster + Special Look at Championship Week`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650480453/All_Elite_Network/Media/Dark/4-12-22.jpg',
+  },
+
+  {
+    title: 'Dark EP. 137',
+    runtime: '44 min',
+    date: new Date(2022, 3, 5),
+    description: `6 Matches: Dark Order, Abadon, Sonny, Lance Archer, The Factory, Ryan Nemeth & More!`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650480862/All_Elite_Network/Media/Dark/4-5-22.jpg',
+  },
+];
+export { payperview, dynamite, rampage, dark };

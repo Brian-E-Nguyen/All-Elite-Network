@@ -31,9 +31,9 @@ const dynamite = [
     title: 'Dynamite 4/13/22',
     runtime: '2 hours',
     date: new Date(2022, 3, 13),
-    description: 'temp',
+    description: `Live from New Orleans! Eddie Kingston, Santana and Ortiz vs Jericho Appreciation Society. ROH World TV Title: Champion Minoru Suzuki vs Samoa Joe. MJF vs Captain Shawn Dean. AEW Tag Team Champs Jungle Boy and Luchasaurus vs reDRagon. `,
     imgSrc:
-      'https://res.cloudinary.com/buraiyen/image/upload/v1650397339/All_Elite_Network/Media/Dynamite/NewOrleans_4-3-22.webp',
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650469521/All_Elite_Network/Media/Dynamite/4-13-22.jpg',
   },
   {
     title: 'Dynamite 4/6/22',
@@ -52,4 +52,15 @@ const dynamite = [
       'https://res.cloudinary.com/buraiyen/image/upload/v1650469521/All_Elite_Network/Media/Dynamite/3-30-22.jpg',
   },
 ];
-export { payperview, dynamite };
+
+const rampage = [
+  {
+    title: 'Rampage 4/15/22',
+    runtime: '2 hours',
+    date: new Date(2022, 3, 15),
+    description: `AEW World Title Texas Death Match: Champion Hangman Adam Page vs. Adam Cole. Trios Debut of the Blackpool Combat Club against The Gunn Club. Owen Hart Foundation Women's Tournament Qualifying Match: Ruby Soho vs. Robyn Renegade.`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650469521/All_Elite_Network/Media/Dynamite/4-13-22.jpg',
+  },
+];
+export { payperview, dynamite, rampage };

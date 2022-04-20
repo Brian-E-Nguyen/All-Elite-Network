@@ -56,11 +56,35 @@ const dynamite = [
 const rampage = [
   {
     title: 'Rampage 4/15/22',
-    runtime: '2 hours',
+    runtime: '44 min',
     date: new Date(2022, 3, 15),
     description: `AEW World Title Texas Death Match: Champion Hangman Adam Page vs. Adam Cole. Trios Debut of the Blackpool Combat Club against The Gunn Club. Owen Hart Foundation Women's Tournament Qualifying Match: Ruby Soho vs. Robyn Renegade.`,
     imgSrc:
-      'https://res.cloudinary.com/buraiyen/image/upload/v1650469521/All_Elite_Network/Media/Dynamite/4-13-22.jpg',
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650473003/All_Elite_Network/Media/Rampage/4-15-22.jpg',
+  },
+  {
+    title: 'Rampage 4/8/22',
+    runtime: '45 min',
+    date: new Date(2022, 3, 8),
+    description: `Wheeler Yuta faces Blackpool Combat Club’s Jon Moxley. Bryan Danielson vs. Trent Beretta. Owen Hart Foundation Women’s Qualifying Match: Red Velvet vs. Willow Nightingale. Swerve Strickland in action.`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650473003/All_Elite_Network/Media/Rampage/4-8-22.jpg',
+  },
+  {
+    title: 'Rampage 4/1/22',
+    runtime: '44 min',
+    date: new Date(2022, 3, 1),
+    description: `Top Flight vs. The Young Bucks. Powerhouse Hobbs collides with Keith Lee. Fuego Del Sol, Evil Uno and Stu Grayson face the House of Black (Brody King, Buddy Matthews and Malakai Black). Jamie Hayter vs. Skye Blue.`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650473003/All_Elite_Network/Media/Rampage/4-1-22.jpg',
+  },
+  {
+    title: 'Rampage 4/1/22',
+    runtime: '44 min',
+    date: new Date(2022, 2, 25),
+    description: `Swerve Strickland vs. FTW Champion Ricky Starks. Lance Archer vs. Dustin Rhodes. Bobby Fish & Kyle O'Reilly vs. Dark Order. QT Marshall presents his "certificate of accomplishment" to Team Taz's Hook. Nyla Rose in action.`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650473003/All_Elite_Network/Media/Rampage/3-25-22.jpg',
   },
 ];
 export { payperview, dynamite, rampage };

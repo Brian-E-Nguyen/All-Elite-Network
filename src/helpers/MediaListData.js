@@ -115,4 +115,15 @@ const dark = [
       'https://res.cloudinary.com/buraiyen/image/upload/v1650480862/All_Elite_Network/Media/Dark/4-5-22.jpg',
   },
 ];
-export { payperview, dynamite, rampage, dark };
+
+const darkElevation = [
+  {
+    title: 'Dark Elevation EP. 59',
+    runtime: '44 min',
+    date: new Date(2022, 3, 19),
+    description: `7 Matches Featuring The Hardys, Shida, Top Flight, Ruby Soho, Andrade & More`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650481565/All_Elite_Network/Media/Dark_Elevation/4-18-22.jpg',
+  },
+];
+export { payperview, dynamite, rampage, dark, darkElevation };

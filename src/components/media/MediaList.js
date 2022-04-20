@@ -17,14 +17,11 @@ const MediaList = (props) => {
       setSlideNumber((previousNumber) => previousNumber - 1);
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
-    // FIXME: slide number dynamic
-    if (direction === 'right' && slideNumber < 5) {
+    if (direction === 'right' && slideNumber < props.mediaListData.length - 1) {
       setSlideNumber((previousNumber) => previousNumber + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
   };
-
-  console.log(props);
 
   return (
     <div className='media-list'>
@@ -37,7 +34,6 @@ const MediaList = (props) => {
         <div className='container' ref={listRef}>
           {props.mediaListData.map((data, i) => (
             <MediaItem key={i} data={data} index={i} />
-            // <h1 key={i}>{i}</h1>
           ))}
         </div>
         <ArrowForwardIosOutlined

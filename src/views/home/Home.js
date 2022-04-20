@@ -3,7 +3,12 @@ import Navbar from '../../components/navbar/Navbar';
 import Featured from '../../components/featured/Featured';
 import MediaList from '../../components/media/MediaList';
 import Footer from '../../components/footer/Footer';
-import { payperview, dynamite } from '../../helpers/MediaListData';
+import {
+  payperview,
+  dynamite,
+  rampage,
+  dark,
+} from '../../helpers/MediaListData';
 const Home = () => {
   return (
     <div className='home'>
@@ -11,9 +16,9 @@ const Home = () => {
       <Featured />
       <MediaList mediaListTitle={'Pay-Per View'} mediaListData={payperview} />
       <MediaList mediaListTitle={'Dynamite'} mediaListData={dynamite} />
-      {/* <MediaList mediaListTitle={'Rampage'} />
-      <MediaList mediaListTitle={'Dark'} />
-      <MediaList mediaListTitle={'Dark Elevation'} /> */}
+      <MediaList mediaListTitle={'Rampage'} mediaListData={rampage} />
+      <MediaList mediaListTitle={'Dark'} mediaListData={dark} />
+      {/* <MediaList mediaListTitle={'Dark Elevation'} /> */}
       <Footer />
     </div>
   );

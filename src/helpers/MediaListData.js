@@ -35,5 +35,21 @@ const dynamite = [
     imgSrc:
       'https://res.cloudinary.com/buraiyen/image/upload/v1650397339/All_Elite_Network/Media/Dynamite/NewOrleans_4-3-22.webp',
   },
+  {
+    title: 'Dynamite 4/6/22',
+    runtime: '2 hours',
+    date: new Date(2022, 3, 6),
+    description: `The Butcher and The Blade take on Jeff and Matt Hardy. The Young Bucks wrestle the ROH and AAA Tag Team Champions FTR. Christian Cage vs. Adam Cole. Qualifying matches in both the men's and women's Owen Hart Foundation Tournament. Samoa Joe arrives!`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650469521/All_Elite_Network/Media/Dynamite/4-6-22.jpg',
+  },
+  {
+    title: 'Dynamite 3/30/22',
+    runtime: '2 hours',
+    date: new Date(2022, 2, 30),
+    description: `Darby Allin vs. Andrade El Idolo. FTR vs. Gunn Club. Owen Hart Foundation Women's Tournament Qualifier: The Bunny vs. newest member of the AEW roster. Adam Cole & ReDragon promise to hold a "Championship Celebration".`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650469521/All_Elite_Network/Media/Dynamite/3-30-22.jpg',
+  },
 ];
 export { payperview, dynamite };

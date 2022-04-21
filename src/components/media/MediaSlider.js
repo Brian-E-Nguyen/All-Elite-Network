@@ -28,14 +28,14 @@ const MediaSlider = (props) => {
 
   return (
     <div className='media-slider'>
-      <span className='media-slider-title'>{props.MediaSliderTitle}</span>
+      <span className='media-slider-title'>{props.mediaSliderTitle}</span>
       <div className='wrapper'>
         <ArrowBackIosOutlined
           className='slider-arrow left'
           onClick={() => clickHandler('left')}
         />
         <div className='container' ref={listRef}>
-          {props.MediaSliderData.map((data, i) => (
+          {props.mediaSliderData.map((data, i) => (
             <MediaItem key={i} data={data} index={i} />
           ))}
         </div>

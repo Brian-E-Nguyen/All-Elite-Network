@@ -17,10 +17,7 @@ const MediaSlider = (props) => {
       setSlideNumber((previousNumber) => previousNumber - 1);
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
-    if (
-      direction === 'right' &&
-      slideNumber < props.MediaSliderData.length - 1
-    ) {
+    if (direction === 'right' && slideNumber < props.MediaListData.length - 1) {
       setSlideNumber((previousNumber) => previousNumber + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
@@ -35,7 +32,7 @@ const MediaSlider = (props) => {
           onClick={() => clickHandler('left')}
         />
         <div className='container' ref={listRef}>
-          {props.mediaSliderData.map((data, i) => (
+          {props.MediaListData.map((data, i) => (
             <MediaItem key={i} data={data} index={i} />
           ))}
         </div>

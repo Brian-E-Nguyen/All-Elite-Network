@@ -6,21 +6,23 @@ const payperview = [
     title: 'Double or Nothing 2022',
     runtime: '4 hours',
     date: new Date(2022, 4, 29),
-    description: 'temp',
+    description: 'Description coming soon',
     imgSrc: `${CLOUDINARY_LINK}/Media/PPV/DoubleOrNothing2022.webp`,
   },
   {
     title: 'Revolution 2022',
     runtime: '4 hours',
     date: new Date(2022, 2, 26),
-    description: 'temp',
+    description:
+      'The first big PPV of the year comes to you with a major main event, where AEW World Champion "Hangman" Adam Page defends his title against Adam Cole.',
     imgSrc: `${CLOUDINARY_LINK}/Media/PPV/Revolution2022.jpg`,
   },
   {
     title: 'Full Gear 2021',
     runtime: '4 hours',
     date: new Date(2021, 10, 13),
-    description: 'temp',
+    description:
+      'One of the most anticipated fights will happen in Full Gear 2021 when AEW World Champion Kenny Omega defends his title against "Hangman" Adam Page. Hangman is waiting for this opportunity for a long time and now these two top wrestling stars will collide in a clash for the AEW World Championship. ',
     imgSrc: `${CLOUDINARY_LINK}/Media/PPV/FullGear2021.jpg`,
   },
 ];

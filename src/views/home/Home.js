@@ -17,15 +17,15 @@ const Home = () => {
       <Featured />
       <MediaSlider
         mediaSliderTitle={'Pay-Per View'}
-        mediaSliderData={payperview}
+        MediaListData={payperview}
       />
-      <MediaSlider mediaSliderTitle={'Dynamite'} mediaSliderData={dynamite} />
-      <MediaSlider mediaSliderTitle={'Rampage'} mediaSliderData={rampage} />
-      <MediaSlider mediaSliderTitle={'Dark'} mediaSliderData={dark} />
+      <MediaSlider mediaSliderTitle={'Dynamite'} MediaListData={dynamite} />
+      <MediaSlider mediaSliderTitle={'Rampage'} MediaListData={rampage} />
+      <MediaSlider mediaSliderTitle={'Dark'} MediaListData={dark} />
 
       <MediaSlider
         mediaSliderTitle={'Dark Elevation'}
-        mediaSliderData={darkElevation}
+        MediaListData={darkElevation}
       />
       <Footer />
     </div>

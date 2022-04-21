@@ -27,8 +27,8 @@ const MediaSlider = (props) => {
   };
 
   return (
-    <div className='media-list'>
-      <span className='media-list-title'>{props.MediaSliderTitle}</span>
+    <div className='media-slider'>
+      <span className='media-slider-title'>{props.MediaSliderTitle}</span>
       <div className='wrapper'>
         <ArrowBackIosOutlined
           className='slider-arrow left'

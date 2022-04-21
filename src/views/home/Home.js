@@ -1,14 +1,29 @@
 import './Home.scss';
 import Navbar from '../../components/navbar/Navbar';
+import Featured from '../../components/featured/Featured';
+import MediaList from '../../components/media/MediaList';
+import Footer from '../../components/footer/Footer';
+import {
+  payperview,
+  dynamite,
+  rampage,
+  dark,
+  darkElevation,
+} from '../../helpers/MediaListData';
 const Home = () => {
   return (
     <div className='home'>
       <Navbar />
-      <img
-        src='https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwrestlingnews.co%2Fwp-content%2Fuploads%2F2022%2F02%2FAEW-Dynamite-stage-arena.png&sp=1649967497T81222fff90001de44768131bc4f8b9eb61d9da9bb289229b2af38d9940cfd5e9'
-        className='jumbotron'
-        alt=''
+      <Featured />
+      <MediaList mediaListTitle={'Pay-Per View'} mediaListData={payperview} />
+      <MediaList mediaListTitle={'Dynamite'} mediaListData={dynamite} />
+      <MediaList mediaListTitle={'Rampage'} mediaListData={rampage} />
+      <MediaList mediaListTitle={'Dark'} mediaListData={dark} />
+      <MediaList
+        mediaListTitle={'Dark Elevation'}
+        mediaListData={darkElevation}
       />
+      <Footer />
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import Home from './views/home/Home';
+import RenderRoutes from './router/RenderRoutes';
 
 const App = () => {
   return (
     <div>
-      <Home />
+      <RenderRoutes />
     </div>
   );
 };

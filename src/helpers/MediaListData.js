@@ -125,5 +125,21 @@ const darkElevation = [
     imgSrc:
       'https://res.cloudinary.com/buraiyen/image/upload/v1650481565/All_Elite_Network/Media/Dark_Elevation/4-18-22.jpg',
   },
+  {
+    title: 'Dark Elevation EP. 58',
+    runtime: '44 min',
+    date: new Date(2022, 3, 11),
+    description: `76 Matches Featuring Penta, Dark Order, Ruby Soho, Top Flight, Kazarian & More`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650481565/All_Elite_Network/Media/Dark_Elevation/4-11-22.jpg',
+  },
+  {
+    title: 'Dark Elevation EP. 57',
+    runtime: '44 min',
+    date: new Date(2022, 3, 4),
+    description: `8 Matches Featuring Paul Wight, Best Friends, Ruby Soho, Anna Jay, Kaz & More`,
+    imgSrc:
+      'https://res.cloudinary.com/buraiyen/image/upload/v1650481565/All_Elite_Network/Media/Dark_Elevation/4-4-22.jpg',
+  },
 ];
 export { payperview, dynamite, rampage, dark, darkElevation };

@@ -1,8 +1,6 @@
 import './Home.scss';
-import Navbar from '../../components/navbar/Navbar';
-import Featured from '../../components/featured/Featured';
+
 import MediaSlider from '../../components/media/MediaSlider';
-import Footer from '../../components/footer/Footer';
 import {
   payperview,
   dynamite,
@@ -13,8 +11,6 @@ import {
 const Home = () => {
   return (
     <div className='home'>
-      <Navbar />
-      <Featured />
       <MediaSlider
         mediaSliderTitle={'Pay-Per View'}
         MediaListData={payperview}
@@ -27,7 +23,6 @@ const Home = () => {
         mediaSliderTitle={'Dark Elevation'}
         MediaListData={darkElevation}
       />
-      <Footer />
     </div>
   );
 };

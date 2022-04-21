@@ -8,4 +8,5 @@ $elite-gold: #d6bc6d;
 // root selects the root element and applies styles
 :root {
   --main-color: #0b0b0b;
+  background-color: var(--main-color);
 }

@@ -4,9 +4,9 @@ import {
 } from '@mui/icons-material';
 import { useRef, useState } from 'react';
 import MediaItem from './MediaItem';
-import './MediaList.scss';
+import './MediaSlider.scss';
 
-const MediaList = (props) => {
+const MediaSlider = (props) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef();
 
@@ -17,22 +17,25 @@ const MediaList = (props) => {
       setSlideNumber((previousNumber) => previousNumber - 1);
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
-    if (direction === 'right' && slideNumber < props.mediaListData.length - 1) {
+    if (
+      direction === 'right' &&
+      slideNumber < props.MediaSliderData.length - 1
+    ) {
       setSlideNumber((previousNumber) => previousNumber + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
   };
 
   return (
-    <div className='media-list'>
-      <span className='media-list-title'>{props.mediaListTitle}</span>
+    <div className='media-slider'>
+      <span className='media-slider-title'>{props.MediaSliderTitle}</span>
       <div className='wrapper'>
         <ArrowBackIosOutlined
           className='slider-arrow left'
           onClick={() => clickHandler('left')}
         />
         <div className='container' ref={listRef}>
-          {props.mediaListData.map((data, i) => (
+          {props.MediaSliderData.map((data, i) => (
             <MediaItem key={i} data={data} index={i} />
           ))}
         </div>
@@ -45,4 +48,4 @@ const MediaList = (props) => {
   );
 };
 
-export default MediaList;
+export default MediaSlider;

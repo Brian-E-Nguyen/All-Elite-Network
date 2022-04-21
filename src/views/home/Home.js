@@ -1,7 +1,7 @@
 import './Home.scss';
 import Navbar from '../../components/navbar/Navbar';
 import Featured from '../../components/featured/Featured';
-import MediaList from '../../components/media/MediaList';
+import MediaSlider from '../../components/media/MediaSlider';
 import Footer from '../../components/footer/Footer';
 import {
   payperview,
@@ -15,13 +15,17 @@ const Home = () => {
     <div className='home'>
       <Navbar />
       <Featured />
-      <MediaList mediaListTitle={'Pay-Per View'} mediaListData={payperview} />
-      <MediaList mediaListTitle={'Dynamite'} mediaListData={dynamite} />
-      <MediaList mediaListTitle={'Rampage'} mediaListData={rampage} />
-      <MediaList mediaListTitle={'Dark'} mediaListData={dark} />
-      <MediaList
-        mediaListTitle={'Dark Elevation'}
-        mediaListData={darkElevation}
+      <MediaSlider
+        mediaSliderTitle={'Pay-Per View'}
+        mediaSliderData={payperview}
+      />
+      <MediaSlider mediaSliderTitle={'Dynamite'} mediaSliderData={dynamite} />
+      <MediaSlider mediaSliderTitle={'Rampage'} mediaSliderData={rampage} />
+      <MediaSlider mediaSliderTitle={'Dark'} mediaSliderData={dark} />
+
+      <MediaSlider
+        mediaSliderTitle={'Dark Elevation'}
+        mediaSliderData={darkElevation}
       />
       <Footer />
     </div>

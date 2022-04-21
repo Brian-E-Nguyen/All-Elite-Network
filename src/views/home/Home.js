@@ -1,7 +1,7 @@
 import './Home.scss';
 import Navbar from '../../components/navbar/Navbar';
 import Featured from '../../components/featured/Featured';
-import MediaList from '../../components/media/MediaList';
+import MediaSlider from '../../components/media/MediaSlider';
 import Footer from '../../components/footer/Footer';
 import { payperview, dynamite } from '../../helpers/MediaListData';
 const Home = () => {
@@ -9,11 +9,14 @@ const Home = () => {
     <div className='home'>
       <Navbar />
       <Featured />
-      <MediaList mediaListTitle={'Pay-Per View'} mediaListData={payperview} />
-      <MediaList mediaListTitle={'Dynamite'} mediaListData={dynamite} />
-      {/* <MediaList mediaListTitle={'Rampage'} />
-      <MediaList mediaListTitle={'Dark'} />
-      <MediaList mediaListTitle={'Dark Elevation'} /> */}
+      <MediaSlider
+        MediaSliderTitle={'Pay-Per View'}
+        MediaSliderData={payperview}
+      />
+      <MediaSlider MediaSliderTitle={'Dynamite'} MediaSliderData={dynamite} />
+      {/* <MediaSlider MediaSliderTitle={'Rampage'} />
+      <MediaSlider MediaSliderTitle={'Dark'} />
+      <MediaSlider MediaSliderTitle={'Dark Elevation'} /> */}
       <Footer />
     </div>
   );

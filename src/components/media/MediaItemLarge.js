@@ -4,11 +4,11 @@ import {
   ThumbDownAltOutlined,
   ThumbUpAltOutlined,
 } from '@mui/icons-material';
-import './MediaItem.scss';
+import './MediaItemLarge.scss';
 
 const MediaItemLarge = (props) => {
   return (
-    <div className='media-item'>
+    <div className='media-item-large'>
       <img src={props.data.imgSrc} alt='' />
       <div className='icons'>
         <PlayArrow className='icon' />

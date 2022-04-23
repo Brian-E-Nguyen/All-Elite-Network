@@ -2,35 +2,10 @@ import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.scss';
+import ROUTES from '../../router/Routes';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const links = [
-    {
-      linkTitle: 'Featured',
-      linkPath: '/',
-    },
-    {
-      linkTitle: 'Pay-Per View',
-      linkPath: '/payperview',
-    },
-    {
-      linkTitle: 'Dynamite',
-      linkPath: '/dynamite',
-    },
-    {
-      linkTitle: 'Rampage',
-      linkPath: '/rampage',
-    },
-    {
-      linkTitle: 'Dark',
-      linkPath: '/dark',
-    },
-    {
-      linkTitle: 'Dark Elevation',
-      linkPath: '/dark-elevation',
-    },
-  ];
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
@@ -45,9 +20,9 @@ const Navbar = () => {
             alt='All Elite Wrestling logo'
           />
           <div>
-            {links.map((link, i) => (
-              <span key={i}>
-                <NavLink to={link.linkPath}>{link.linkTitle}</NavLink>
+            {ROUTES.map((route) => (
+              <span key={route.key}>
+                <NavLink to={route.path}>{route.title}</NavLink>
               </span>
             ))}
           </div>

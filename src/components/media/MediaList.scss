@@ -1,5 +1,11 @@
 .media-list {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  // items wrap in a container
+  flex-wrap: wrap;
+  // align items along x-axis
+  align-items: center;
+  flex-direction: row;
+  // align items along y-axis
+  justify-content: center;
 }

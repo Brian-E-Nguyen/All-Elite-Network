@@ -12,7 +12,14 @@ const Footer = () => {
         <div className='links'>
           {ROUTES.map((route) => (
             <span key={route.key}>
-              <NavLink to={route.path}>{route.title}</NavLink>
+              <NavLink
+                exact
+                className='navlink'
+                activeClassName='navlink active'
+                to={route.path}
+              >
+                {route.title}
+              </NavLink>
             </span>
           ))}
         </div>

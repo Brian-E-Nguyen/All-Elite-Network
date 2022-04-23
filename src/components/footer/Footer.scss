@@ -1,3 +1,5 @@
+@use '../../App.scss' as v;
+
 .footer {
   margin-top: 100px;
   background-color: black;
@@ -19,6 +21,15 @@
         font-weight: 900;
         margin: 0 10px;
         cursor: pointer;
+        .navlink {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+          &.active,
+          &:hover {
+            color: v.$elite-gold;
+          }
+        }
       }
     }
 

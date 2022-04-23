@@ -1,5 +1,6 @@
 import './Footer.scss';
-
+import ROUTES from '../../router/Routes';
+import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
     <div className='footer'>
@@ -9,12 +10,11 @@ const Footer = () => {
           alt='All Elite Wrestling logo'
         />
         <div className='links'>
-          <span>Featured</span>
-          <span>Pay-Per View</span>
-          <span>Dynamite</span>
-          <span>Rampage</span>
-          <span>Dark</span>
-          <span>Dark Elevation</span>
+          {ROUTES.map((route) => (
+            <span key={route.key}>
+              <NavLink to={route.path}>{route.title}</NavLink>
+            </span>
+          ))}
         </div>
         <div className='disclaimer'>
           This is a fan-made site and is in no way affiliated with All Elite

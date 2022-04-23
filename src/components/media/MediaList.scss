@@ -1,5 +1,14 @@
 .media-list {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  // items wrap in a container
+  flex-wrap: wrap;
+  // align items along x-axis
+  align-items: flex-start;
+  // determines where the starting point of an item is
+  align-content: flex-start;
+  flex-direction: row;
+  gap: 30px;
 }

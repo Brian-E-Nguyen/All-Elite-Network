@@ -3,6 +3,7 @@ import PPV from '../views/PPV';
 import Dynamite from '../views/Dynamite';
 import Rampage from '../views/Rampage';
 import Dark from '../views/Dark';
+import DarkElevation from '../views/DarkElevation';
 
 const ROUTES = [
   { title: 'Featured', path: '/', exact: true, key: 'Home', component: Home },
@@ -15,7 +16,12 @@ const ROUTES = [
   },
   { title: 'Rampage', path: '/rampage', key: 'Rampage', component: Rampage },
   { title: 'Dark', path: '/dark', key: 'Dark', component: Dark },
-  { title: 'Dark Elevation', path: '/darkelevation', key: 'Dark Elevation' },
+  {
+    title: 'Dark Elevation',
+    path: '/darkelevation',
+    key: 'Dark Elevation',
+    component: DarkElevation,
+  },
 ];
 
 export default ROUTES;

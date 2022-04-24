@@ -1,5 +1,5 @@
-import Home from '../views/home/Home';
-import PPV from '../views/payperview/PPV';
+import Home from '../views/Home';
+import PPV from '../views/PPV';
 const ROUTES = [
   { title: 'Featured', path: '/', exact: true, key: 'Home', component: Home },
   { title: 'Pay-Per View', path: '/payperview', key: 'PPV', component: PPV },

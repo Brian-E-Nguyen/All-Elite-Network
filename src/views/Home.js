@@ -1,13 +1,13 @@
 import './Home.scss';
 
-import MediaSlider from '../../components/media/MediaSlider';
+import MediaSlider from '../components/media/MediaSlider';
 import {
   payperview,
   dynamite,
   rampage,
   dark,
   darkElevation,
-} from '../../helpers/MediaListData';
+} from '../helpers/MediaListData';
 const Home = () => {
   return (
     <div className='home'>

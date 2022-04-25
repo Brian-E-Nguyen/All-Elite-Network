@@ -12,7 +12,7 @@ The All Elite Network is the ultimate _unofficial_ streaming service for fans of
 
 ## Disclaimer
 
-This application is a mockup UI design for what the application would look like if it were to exist. Due to copyright, this application will not feature any replays of Pay-Per-Views and TV Shows (unless the full versions have been uploaded to the official AEW YouTube channel). All rights to the images used in this app go to their respective owners
+All Elite Network is a fan-made site and is not affiliated with All Elite Wrestling. The application is a mockup UI design for what the application would look like if it were to exist. Due to copyright, this application will not feature any replays of Pay-Per-Views and TV Shows (unless the full versions have been uploaded to the official AEW YouTube channel). All rights to the images used in this app go to their respective owners
 
 ## Tech Stack
 

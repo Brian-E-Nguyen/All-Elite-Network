@@ -10,7 +10,9 @@ For years, fans have been wanting a streaming service that provides convenient a
 
 The All Elite Network is the ultimate _unofficial_ streaming service for fans of All Elite Wrestling to access the AEW library of amazing content
 
-This application is a mockup UI design for what the application would look like if it were to exist.
+## Disclaimer
+
+This application is a mockup UI design for what the application would look like if it were to exist. Due to copyright, this application will not feature any replays of Pay-Per-Views and TV Shows (unless the full versions have been uploaded to the official AEW YouTube channel). All rights to the images used in this app go to their respective owners
 
 ## Tech Stack
 

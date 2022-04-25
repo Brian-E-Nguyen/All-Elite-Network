@@ -1,5 +1,9 @@
 # All Elite Network
 
+Link to the website:
+
+https://all-elite-network.pages.dev/
+
 ## Background
 
 All Elite Wrestling (AEW) is an American wrestling company based in Jacksonville, Florida. Since its inception in 2019, AEW has changed the landscape of professional wrestling. It provided a great alternative for new and old wrestling fans, and is considered the second largest professional wrestling company behind Word Wrestling Entertainment (WWE).
@@ -24,7 +28,8 @@ All Elite Network is a fan-made site and is not affiliated with All Elite Wrestl
 This application is currently a work-in-progress. Below are aspects that I will include in the future:
 
 - Login module
-- YouTube API to embed Dark / Dark Elevation videos rather than using hard-coded data
+- YouTube API to embed Dark / Dark Elevation videos
+- implement database to store media data rather than hard-coding data
 - mobile design
 
 ## Images

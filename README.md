@@ -26,3 +26,9 @@ This application is currently a work-in-progress. Below are aspects that I will 
 - Login module
 - YouTube API to embed Dark / Dark Elevation videos rather than using hard-coded data
 - mobile design
+
+## Images
+
+![img1](./readme-img/img1.png)
+![img2](./readme-img/img2.png)
+![img3](./readme-img/img3.png)

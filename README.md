@@ -21,5 +21,8 @@ All Elite Network is a fan-made site and is not affiliated with All Elite Wrestl
 
 ## Future Plans
 
+This application is currently a work-in-progress. Below are aspects that I will include in the future:
+
 - Login module
 - YouTube API to embed Dark / Dark Elevation videos rather than using hard-coded data
+- mobile design

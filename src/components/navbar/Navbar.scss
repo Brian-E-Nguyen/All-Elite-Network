@@ -74,18 +74,15 @@
           -webkit-box-shadow: 0px 23px 19px 0px v.$elite-gold;
           box-shadow: 0px 23px 19px 0px v.$elite-gold;
           padding-bottom: 20px;
-          background-color: none;
-          transition: opacity 0.2s;
-
+          background-color: var(--main-color);
+          transform: translate(-50%, 25%);
+          position: absolute;
+          left: 50%;
+          transition: 0.4s;
+          top: 0;
           &.mobile {
             opacity: 1;
             visibility: visible;
-            background-color: var(--main-color);
-            display: flex;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, 25%);
           }
         }
       }

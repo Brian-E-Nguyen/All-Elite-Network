@@ -44,6 +44,11 @@ const Navbar = () => {
             <span>Settings</span>
             <span>Logout</span>
           </div>
+          <div className='burger-btn'>
+            <div className='burger-btn__line'></div>
+            <div className='burger-btn__line'></div>
+            <div className='burger-btn__line'></div>
+          </div>
         </div>
       </div>
     </div>

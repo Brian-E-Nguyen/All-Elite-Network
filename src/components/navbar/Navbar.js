@@ -15,10 +15,12 @@ const Navbar = () => {
     <div className={isScrolled ? 'navbar scrolled' : 'navbar'}>
       <div className='container'>
         <div className='left'>
-          <img
-            src='https://upload.wikimedia.org/wikipedia/en/6/6d/All_Elite_Wrestling.jpg'
-            alt='All Elite Wrestling logo'
-          />
+          <NavLink to='/'>
+            <img
+              src='https://upload.wikimedia.org/wikipedia/en/6/6d/All_Elite_Wrestling.jpg'
+              alt='All Elite Wrestling logo'
+            />
+          </NavLink>
           <div>
             {ROUTES.map((route) => (
               <span key={route.key}>

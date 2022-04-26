@@ -6,6 +6,13 @@ import ROUTES from '../../router/Routes';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isInMobileMenu, setIsInMobileMenu] = useState(false);
+
+  const buttonClickHandler = () => {
+    setIsInMobileMenu((prevState) => !prevState);
+    console.log(isInMobileMenu);
+  };
+
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
@@ -44,7 +51,7 @@ const Navbar = () => {
             <span>Settings</span>
             <span>Logout</span>
           </div>
-          <div className='burger-btn'>
+          <div className='burger-btn' onClick={buttonClickHandler}>
             <div className='burger-btn__line'></div>
             <div className='burger-btn__line'></div>
             <div className='burger-btn__line'></div>

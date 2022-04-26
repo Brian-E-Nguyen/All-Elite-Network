@@ -14,24 +14,6 @@
     background-color: var(--main-color);
   }
 
-  .burger-btn {
-    @media screen and (min-width: v.$tablet-size) {
-      display: none;
-    }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3px;
-    .burger-btn__line {
-      border-radius: 10px;
-      background-color: white;
-      width: 30px;
-      height: 1px;
-      border: 1px solid white;
-    }
-  }
-
   span {
     text-transform: uppercase;
     font-weight: 900;
@@ -105,5 +87,32 @@
         }
       }
     }
+  }
+}
+
+.burger-btn {
+  @media screen and (min-width: v.$tablet-size) {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px;
+  transition: border-radius 0.4s, box-shadow 0.4s;
+
+  &:hover,
+  &.active {
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px v.$elite-gold;
+  }
+
+  .burger-btn__line {
+    border-radius: 10px;
+    background-color: white;
+    width: 30px;
+    height: 1px;
+    border: 1px solid white;
   }
 }

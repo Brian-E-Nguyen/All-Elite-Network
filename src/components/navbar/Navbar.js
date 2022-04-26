@@ -54,7 +54,10 @@ const Navbar = () => {
             <span>Settings</span>
             <span>Logout</span>
           </div>
-          <div className='burger-btn' onClick={buttonClickHandler}>
+          <div
+            className={isInMobileMenu ? 'burger-btn active' : 'burger-btn'}
+            onClick={buttonClickHandler}
+          >
             <div className='burger-btn__line'></div>
             <div className='burger-btn__line'></div>
             <div className='burger-btn__line'></div>

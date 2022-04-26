@@ -15,6 +15,9 @@
   }
 
   .burger-btn {
+    @media screen and (min-width: v.$tablet-size) {
+      display: none;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +37,7 @@
     font-weight: 900;
     margin: 0 10px;
     cursor: pointer;
-    @media screen and (max-width: v.$phone-size) {
+    @media screen and (max-width: v.$tablet-size) {
       display: none;
     }
 

@@ -6,20 +6,32 @@ import ROUTES from '../../router/Routes';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isInMobileMenu, setIsInMobileMenu] = useState(false);
+
+  const buttonClickHandler = () => {
+    setIsInMobileMenu((prevState) => !prevState);
+    console.log(isInMobileMenu);
+  };
+
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
 
   return (
-    <div className={isScrolled ? 'navbar scrolled' : 'navbar'}>
+    <div
+      className={isScrolled || isInMobileMenu ? 'navbar scrolled' : 'navbar'}
+    >
       <div className='container'>
         <div className='left'>
-          <img
-            src='https://upload.wikimedia.org/wikipedia/en/6/6d/All_Elite_Wrestling.jpg'
-            alt='All Elite Wrestling logo'
-          />
-          <div>
+          <NavLink to='/'>
+            <img
+              src='https://upload.wikimedia.org/wikipedia/en/6/6d/All_Elite_Wrestling.jpg'
+              alt='All Elite Wrestling logo'
+            />
+          </NavLink>
+
+          <div className={isInMobileMenu ? 'navlinks mobile' : 'navlinks'}>
             {ROUTES.map((route) => (
               <span key={route.key}>
                 <NavLink
@@ -41,6 +53,14 @@ const Navbar = () => {
           <div className='options'>
             <span>Settings</span>
             <span>Logout</span>
+          </div>
+          <div
+            className={isInMobileMenu ? 'burger-btn active' : 'burger-btn'}
+            onClick={buttonClickHandler}
+          >
+            <div className='burger-btn__line'></div>
+            <div className='burger-btn__line'></div>
+            <div className='burger-btn__line'></div>
           </div>
         </div>
       </div>

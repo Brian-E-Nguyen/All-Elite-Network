@@ -2,7 +2,7 @@
 
 .navbar {
   color: white;
-  font-size: 14px;
+  font-size: 1.2rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -37,12 +37,36 @@
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    flex-direction: row;
 
     .left {
       display: flex;
       align-items: center;
       img {
         height: 50px;
+      }
+      .navlinks {
+        @media screen and (max-width: v.$tablet-size) {
+          visibility: hidden;
+          opacity: 0;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          font-size: 2rem;
+          -webkit-box-shadow: 0px 23px 19px 0px v.$elite-gold;
+          box-shadow: 0px 23px 19px 0px v.$elite-gold;
+          padding-bottom: 20px;
+          transform: translate(-50%, 25%);
+          position: absolute;
+          left: 50%;
+          top: 0;
+          &.mobile {
+            opacity: 1;
+            transition: 0.4s;
+            background-color: var(--main-color);
+            visibility: visible;
+          }
+        }
       }
     }
 
@@ -63,5 +87,32 @@
         }
       }
     }
+  }
+}
+
+.burger-btn {
+  @media screen and (min-width: v.$tablet-size) {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px;
+  transition: border-radius 0.4s, box-shadow 0.4s;
+
+  &:hover,
+  &.active {
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px v.$elite-gold;
+  }
+
+  .burger-btn__line {
+    border-radius: 10px;
+    background-color: white;
+    width: 30px;
+    height: 1px;
+    border: 1px solid white;
   }
 }

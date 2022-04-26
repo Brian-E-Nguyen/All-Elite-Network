@@ -74,7 +74,6 @@
           -webkit-box-shadow: 0px 23px 19px 0px v.$elite-gold;
           box-shadow: 0px 23px 19px 0px v.$elite-gold;
           padding-bottom: 20px;
-          background-color: var(--main-color);
           transform: translate(-50%, 25%);
           position: absolute;
           left: 50%;
@@ -82,6 +81,7 @@
           top: 0;
           &.mobile {
             opacity: 1;
+            background-color: var(--main-color);
             visibility: visible;
           }
         }

@@ -19,7 +19,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className={isScrolled ? 'navbar scrolled' : 'navbar'}>
+    <div
+      className={isScrolled || isInMobileMenu ? 'navbar scrolled' : 'navbar'}
+    >
       <div className='container'>
         <div className='left'>
           <NavLink to='/'>

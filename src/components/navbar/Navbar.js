@@ -28,22 +28,21 @@ const Navbar = () => {
               alt='All Elite Wrestling logo'
             />
           </NavLink>
-          {isInMobileMenu && (
-            <div className={isInMobileMenu ? 'navlinks mobile' : 'navlinks'}>
-              {ROUTES.map((route) => (
-                <span key={route.key}>
-                  <NavLink
-                    exact
-                    className='navlink'
-                    activeClassName={'navlink active'}
-                    to={route.path}
-                  >
-                    {route.title}
-                  </NavLink>
-                </span>
-              ))}
-            </div>
-          )}
+
+          <div className={isInMobileMenu ? 'navlinks mobile' : 'navlinks'}>
+            {ROUTES.map((route) => (
+              <span key={route.key}>
+                <NavLink
+                  exact
+                  className='navlink'
+                  activeClassName={'navlink active'}
+                  to={route.path}
+                >
+                  {route.title}
+                </NavLink>
+              </span>
+            ))}
+          </div>
         </div>
         <div className='right'>
           <Search />

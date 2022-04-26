@@ -37,9 +37,6 @@
     font-weight: 900;
     margin: 0 10px;
     cursor: pointer;
-    @media screen and (max-width: v.$tablet-size) {
-      display: none;
-    }
 
     .navlink {
       color: white;
@@ -58,12 +55,22 @@
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    flex-direction: row;
 
     .left {
       display: flex;
       align-items: center;
       img {
         height: 50px;
+      }
+      .navlinks {
+        @media screen and (max-width: v.$tablet-size) {
+          display: none;
+          flex-direction: column;
+          &.mobile {
+            display: flex;
+          }
+        }
       }
     }
 

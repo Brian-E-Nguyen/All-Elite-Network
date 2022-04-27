@@ -18,6 +18,12 @@ const Navbar = () => {
     return () => (window.onscroll = null);
   };
 
+  window.onresize = () => {
+    if (window.innerWidth >= 992) {
+      setIsInMobileMenu(false);
+    }
+  };
+
   return (
     <div
       className={isScrolled || isInMobileMenu ? 'navbar scrolled' : 'navbar'}

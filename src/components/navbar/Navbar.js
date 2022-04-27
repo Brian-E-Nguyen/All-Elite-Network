@@ -39,6 +39,7 @@ const Navbar = () => {
                   className='navlink'
                   activeClassName={'navlink active'}
                   to={route.path}
+                  onClick={buttonClickHandler}
                 >
                   {route.title}
                 </NavLink>

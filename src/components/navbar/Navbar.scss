@@ -39,6 +39,12 @@
     height: 70px;
     flex-direction: row;
 
+    @media screen and (max-width: v.$tablet-size) {
+      & {
+        padding: 0 10px;
+      }
+    }
+
     .left {
       display: flex;
       align-items: center;

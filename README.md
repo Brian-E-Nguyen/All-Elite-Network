@@ -1,4 +1,5 @@
-# All Elite Network
+<h1 align='center'>All Elite Network</h1>
+<h2 align='center'>The unofficial streaming service for <br> All Elite Wrestling</h2>
 
 Link to the website:
 
@@ -16,11 +17,12 @@ The All Elite Network is the ultimate _unofficial_ streaming service for fans of
 
 ## Disclaimer
 
-All Elite Network is a fan-made site and is not affiliated with All Elite Wrestling. The application is a mockup UI design for what the application would look like if it were to exist. Due to copyright, this application will not feature any replays of Pay-Per-Views and TV Shows (unless the full versions have been uploaded to the official AEW YouTube channel). All rights to the images used in this app go to their respective owners
+All Elite Network is a fan-made site and is not affiliated with All Elite Wrestling. The application is a mockup UI design for what the application would look like if it were to exist. Due to copyright, this application will not feature any replays of Pay-Per-Views and TV Shows (unless the full versions have been uploaded to the official AEW YouTube channel under the Fair Use license). All rights to the images and media in this app go to their respective owners
 
 ## Tech Stack
 
 - React JS
+- React Router
 - Sass
 
 ## Future Plans
@@ -28,8 +30,9 @@ All Elite Network is a fan-made site and is not affiliated with All Elite Wrestl
 This application is currently a work-in-progress. Below are aspects that I will include in the future:
 
 - Login module
+- Search module
 - YouTube API to embed Dark / Dark Elevation videos
-- implement database to store media data rather than hard-coding data
+- database to store media data rather than hard-coding data
 - mobile design
 
 ## Images

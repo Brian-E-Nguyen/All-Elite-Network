@@ -10,6 +10,7 @@
   transition: width 0.8s, height 0.8s, color 0.2s, -webkit-box-shadow 0.8s,
     box-shadow 0.8s;
   cursor: pointer;
+
   img {
     width: 100%;
     height: 240px;
@@ -36,6 +37,20 @@
     }
     .icon {
       margin-right: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1343px) {
+    & {
+      width: 320px;
+      height: 240px;
+    }
+  }
+
+  @media screen and (max-width: v.$phone-size) {
+    & {
+      width: 280px;
+      height: 160px;
     }
   }
 

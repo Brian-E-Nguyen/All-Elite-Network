@@ -1,14 +1,22 @@
+@use '../../App' as v;
+
 .media-list {
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  display: flex;
-  // items wrap in a container
-  flex-wrap: wrap;
-  // align items along x-axis
-  align-items: flex-start;
-  // determines where the starting point of an item is
-  align-content: flex-start;
-  flex-direction: row;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 30px;
+  row-gap: 15px;
+  justify-items: center;
+  @media screen and (max-width: v.$laptop-size) {
+    & {
+      grid-template-columns: auto auto;
+    }
+  }
+  @media screen and (max-width: v.$phone-size) {
+    & {
+      grid-template-columns: auto;
+    }
+  }
 }

@@ -1,4 +1,5 @@
-# All Elite Network
+<h1 align='center'>All Elite Network</h1>
+<h2 align='center'>The unofficial streaming service for <br> All Elite Wrestling</h2>
 
 Link to the website:
 

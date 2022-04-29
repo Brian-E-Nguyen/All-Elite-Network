@@ -22,6 +22,7 @@ All Elite Network is a fan-made site and is not affiliated with All Elite Wrestl
 ## Tech Stack
 
 - React JS
+- React Router
 - Sass
 
 ## Future Plans
@@ -29,8 +30,9 @@ All Elite Network is a fan-made site and is not affiliated with All Elite Wrestl
 This application is currently a work-in-progress. Below are aspects that I will include in the future:
 
 - Login module
+- Search module
 - YouTube API to embed Dark / Dark Elevation videos
-- implement database to store media data rather than hard-coding data
+- database to store media data rather than hard-coding data
 - mobile design
 
 ## Images

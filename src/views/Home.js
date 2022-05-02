@@ -1,5 +1,4 @@
 import './Home.scss';
-
 import MediaSlider from '../components/media/MediaSlider';
 import {
   payperview,
@@ -8,22 +7,26 @@ import {
   dark,
   darkElevation,
 } from '../helpers/MediaListData';
+import AnimatedPage from '../animations/AnimatedPage';
+
 const Home = () => {
   return (
-    <div className='home'>
-      <MediaSlider
-        mediaSliderTitle={'Pay-Per View'}
-        MediaListData={payperview}
-      />
-      <MediaSlider mediaSliderTitle={'Dynamite'} MediaListData={dynamite} />
-      <MediaSlider mediaSliderTitle={'Rampage'} MediaListData={rampage} />
-      <MediaSlider mediaSliderTitle={'Dark'} MediaListData={dark} />
+    <AnimatedPage>
+      <div className='home'>
+        <MediaSlider
+          mediaSliderTitle={'Pay-Per View'}
+          MediaListData={payperview}
+        />
+        <MediaSlider mediaSliderTitle={'Dynamite'} MediaListData={dynamite} />
+        <MediaSlider mediaSliderTitle={'Rampage'} MediaListData={rampage} />
+        <MediaSlider mediaSliderTitle={'Dark'} MediaListData={dark} />
 
-      <MediaSlider
-        mediaSliderTitle={'Dark Elevation'}
-        MediaListData={darkElevation}
-      />
-    </div>
+        <MediaSlider
+          mediaSliderTitle={'Dark Elevation'}
+          MediaListData={darkElevation}
+        />
+      </div>
+    </AnimatedPage>
   );
 };
 

@@ -10,7 +10,7 @@ const RampagePageTitle = `Rampage ${suffix}`;
 
 const DarkPageTitle = `Dark ${suffix}`;
 
-const DarkElevation = `Dark Elevation ${suffix}`;
+const DarkElevationPageTitle = `Dark Elevation ${suffix}`;
 
 export {
   HomePageTitle,
@@ -18,5 +18,5 @@ export {
   DynamitePageTitle,
   RampagePageTitle,
   DarkPageTitle,
-  DarkElevation,
+  DarkElevationPageTitle,
 };

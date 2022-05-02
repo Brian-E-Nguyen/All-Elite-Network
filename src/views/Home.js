@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './Home.scss';
 import MediaSlider from '../components/media/MediaSlider';
 import {
@@ -8,8 +9,13 @@ import {
   darkElevation,
 } from '../helpers/MediaListData';
 import AnimatedPage from '../animations/AnimatedPage';
+import { HomePageTitle } from '../helpers/PageTitleData';
 
 const Home = () => {
+  useEffect(() => {
+    document.title = HomePageTitle;
+  }, []);
+
   return (
     <AnimatedPage>
       <div className='home'>

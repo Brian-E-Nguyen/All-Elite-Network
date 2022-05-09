@@ -80,17 +80,16 @@
     .right {
       display: flex;
       align-items: center;
-
       .options {
         display: none;
       }
-
-      &:hover {
+      #dropdown-button:hover {
         .options {
           display: flex;
           flex-direction: column;
           position: absolute;
           top: 75%;
+          right: 0;
         }
       }
     }

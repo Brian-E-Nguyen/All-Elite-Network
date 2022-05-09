@@ -56,10 +56,12 @@ const Navbar = () => {
         <div className='right'>
           <Search />
           <Notifications />
-          <ArrowDropDown />
-          <div className='options'>
-            <span>Settings</span>
-            <span>Logout</span>
+          <div id='dropdown-button'>
+            <ArrowDropDown />
+            <div className='options'>
+              <span>Settings</span>
+              <span>Logout</span>
+            </div>{' '}
           </div>
           <div
             className={isInMobileMenu ? 'burger-btn active' : 'burger-btn'}

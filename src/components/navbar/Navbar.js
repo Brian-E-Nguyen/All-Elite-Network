@@ -7,10 +7,16 @@ import ROUTES from '../../router/Routes';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isInMobileMenu, setIsInMobileMenu] = useState(false);
+  const [isDropdownMenuShown, setIsDropdownMenuShown] = useState(false);
 
   const buttonClickHandler = () => {
     setIsInMobileMenu((prevState) => !prevState);
     console.log(isInMobileMenu);
+  };
+
+  const dropdowmMenuHandler = () => {
+    setIsDropdownMenuShown((prevState) => !prevState);
+    console.log(isDropdownMenuShown);
   };
 
   window.onscroll = () => {
@@ -56,7 +62,11 @@ const Navbar = () => {
         <div className='right'>
           <Search />
           <Notifications />
-          <div id='dropdown-button'>
+          <div
+            id='dropdown-button'
+            onMouseEnter={dropdowmMenuHandler}
+            onMouseLeave={dropdowmMenuHandler}
+          >
             <ArrowDropDown />
             <div className='options'>
               <span>Settings</span>

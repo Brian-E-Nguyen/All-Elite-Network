@@ -11,7 +11,6 @@ const Navbar = () => {
 
   const buttonClickHandler = () => {
     setIsInMobileMenu((prevState) => !prevState);
-    console.log(isInMobileMenu);
   };
 
   const dropdowmMenuHandler = () => {
@@ -28,7 +27,6 @@ const Navbar = () => {
       setIsInMobileMenu(false);
     }
   };
-  console.log(isDropdownMenuShown);
   return (
     <div
       className={isScrolled || isInMobileMenu ? 'navbar scrolled' : 'navbar'}

@@ -16,7 +16,6 @@ const Navbar = () => {
 
   const dropdowmMenuHandler = () => {
     setIsDropdownMenuShown((prevState) => !prevState);
-    console.log(isDropdownMenuShown);
   };
 
   window.onscroll = () => {
@@ -29,7 +28,7 @@ const Navbar = () => {
       setIsInMobileMenu(false);
     }
   };
-
+  console.log(isDropdownMenuShown);
   return (
     <div
       className={isScrolled || isInMobileMenu ? 'navbar scrolled' : 'navbar'}
@@ -68,10 +67,14 @@ const Navbar = () => {
             onMouseLeave={dropdowmMenuHandler}
           >
             <ArrowDropDown />
-            <div className='options'>
+            <div
+              className='options'
+              onMouseEnter={dropdowmMenuHandler}
+              onMouseLeave={dropdowmMenuHandler}
+            >
               <span>Settings</span>
               <span>Logout</span>
-            </div>{' '}
+            </div>
           </div>
           <div
             className={isInMobileMenu ? 'burger-btn active' : 'burger-btn'}

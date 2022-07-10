@@ -3,7 +3,7 @@ import './Featured.scss';
 
 const Featured = () => {
   return (
-    <div className='featured'>
+    <div className='featured_slider'>
       <img
         src='https://staticg.sportskeeda.com/editor/2022/02/d50fa-16457460219022-1920.jpg'
         className='jumbotron'

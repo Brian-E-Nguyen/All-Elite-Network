@@ -1,4 +1,4 @@
-import Home from '../views/Home';
+import Featured from '../views/Featured';
 import PPV from '../views/PPV';
 import Dynamite from '../views/Dynamite';
 import Rampage from '../views/Rampage';
@@ -10,8 +10,8 @@ const ROUTES = [
     title: 'Featured',
     path: '/featured',
     exact: true,
-    key: 'Home',
-    component: Home,
+    key: 'Featured',
+    component: Featured,
   },
   { title: 'Pay-Per View', path: '/payperview', key: 'PPV', component: PPV },
   {

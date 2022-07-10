@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './Home.scss';
+import './Featured.scss';
 import MediaSlider from '../components/media/MediaSlider';
 import {
   payperview,

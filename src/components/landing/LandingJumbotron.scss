@@ -25,7 +25,7 @@
 
     .signup_btn {
       width: 100%;
-      margin-top: 20px;
+      margin: 20px 0;
       background-color: v.$elite-gold;
       padding: 12px 0;
       font-size: 1.3rem;
@@ -38,6 +38,20 @@
       &:hover {
         background-color: v.$elite-gold-dark;
         cursor: pointer;
+      }
+    }
+
+    .login {
+      font-size: 1.1rem;
+
+      .login__link {
+        text-decoration: underline;
+        transition: color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          color: rgb(192, 192, 192);
+        }
       }
     }
   }

@@ -18,6 +18,9 @@ const LandingJumbotron = () => {
           Dynamite, Rampage, and more
         </h2>
         <button className='signup_btn'>Sign Up</button>
+        <p className='login'>
+          Or <span className='login__link'>login here</span>
+        </p>
       </div>
     </div>
   );

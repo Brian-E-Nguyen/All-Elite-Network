@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <FeaturedSliders />
+      {/* <FeaturedSliders /> */}
       <RenderRoutes />
       <Footer />
     </div>

@@ -1,3 +1,4 @@
+import Landing from '../views/Landing';
 import Featured from '../views/Featured';
 import PPV from '../views/PPV';
 import Dynamite from '../views/Dynamite';
@@ -7,9 +8,15 @@ import DarkElevation from '../views/DarkElevation';
 
 const ROUTES = [
   {
+    title: 'Landing',
+    path: '/',
+    exact: true,
+    key: 'Landing',
+    component: Landing,
+  },
+  {
     title: 'Featured',
     path: '/featured',
-    exact: true,
     key: 'Featured',
     component: Featured,
   },

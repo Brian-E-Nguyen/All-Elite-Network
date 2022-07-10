@@ -1,5 +1,5 @@
 import { InfoOutlined, PlayArrow } from '@mui/icons-material';
-import './Featured.scss';
+import './FeaturedSliders.scss';
 
 const Featured = () => {
   return (

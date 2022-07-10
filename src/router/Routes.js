@@ -6,7 +6,13 @@ import Dark from '../views/Dark';
 import DarkElevation from '../views/DarkElevation';
 
 const ROUTES = [
-  { title: 'Featured', path: '/', exact: true, key: 'Home', component: Home },
+  {
+    title: 'Featured',
+    path: '/featured',
+    exact: true,
+    key: 'Home',
+    component: Home,
+  },
   { title: 'Pay-Per View', path: '/payperview', key: 'PPV', component: PPV },
   {
     title: 'Dynamite',

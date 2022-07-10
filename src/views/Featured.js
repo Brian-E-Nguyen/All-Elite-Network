@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './Home.scss';
+import './Featured.scss';
 import MediaSlider from '../components/media/MediaSlider';
 import {
   payperview,
@@ -16,9 +16,14 @@ const Home = () => {
     document.title = HomePageTitle;
   }, []);
 
+  const featuredStyles = {
+    overflow: 'hidden',
+    backgroundColor: '#0b0b0b',
+  };
+
   return (
     <AnimatedPage>
-      <div className='home'>
+      <div style={featuredStyles}>
         <MediaSlider
           mediaSliderTitle={'Pay-Per View'}
           MediaListData={payperview}

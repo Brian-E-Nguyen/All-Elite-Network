@@ -1,4 +1,4 @@
-import Home from '../views/Home';
+import Featured from '../views/Featured';
 import PPV from '../views/PPV';
 import Dynamite from '../views/Dynamite';
 import Rampage from '../views/Rampage';
@@ -6,7 +6,13 @@ import Dark from '../views/Dark';
 import DarkElevation from '../views/DarkElevation';
 
 const ROUTES = [
-  { title: 'Featured', path: '/', exact: true, key: 'Home', component: Home },
+  {
+    title: 'Featured',
+    path: '/featured',
+    exact: true,
+    key: 'Featured',
+    component: Featured,
+  },
   { title: 'Pay-Per View', path: '/payperview', key: 'PPV', component: PPV },
   {
     title: 'Dynamite',

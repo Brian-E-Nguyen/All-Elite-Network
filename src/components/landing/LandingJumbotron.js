@@ -17,6 +17,7 @@ const LandingJumbotron = () => {
           Get access to over 500 replays of shows, including Pay-Per Views,
           Dynamite, Rampage, and more
         </h2>
+        <button className='signup_btn'>Sign Up</button>
       </div>
     </div>
   );

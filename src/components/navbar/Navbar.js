@@ -43,15 +43,17 @@ const Navbar = () => {
           <div className={isInMobileMenu ? 'navlinks mobile' : 'navlinks'}>
             {ROUTES.map((route) => (
               <span key={route.key}>
-                <NavLink
-                  exact
-                  className='navlink'
-                  activeClassName={'navlink active'}
-                  to={route.path}
-                  onClick={buttonClickHandler}
-                >
-                  {route.title}
-                </NavLink>
+                {route.key !== 'Landing' && (
+                  <NavLink
+                    exact
+                    className='navlink'
+                    activeClassName={'navlink active'}
+                    to={route.path}
+                    onClick={buttonClickHandler}
+                  >
+                    {route.title}
+                  </NavLink>
+                )}
               </span>
             ))}
           </div>

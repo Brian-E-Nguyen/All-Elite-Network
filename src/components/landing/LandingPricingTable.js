@@ -4,7 +4,7 @@ import './LandingPricingTable.scss';
 const LandingPricingTable = () => {
   return (
     <div className='pricing-table'>
-      <div className='pricing-table__row'>
+      <div className='pricing-table__row--feature'>
         <span>Stream live PPV events and Dark (Elevation) tapings</span>
       </div>
       <div className='pricing-table__row'>

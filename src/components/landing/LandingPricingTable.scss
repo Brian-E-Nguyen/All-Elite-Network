@@ -1,6 +1,10 @@
 .pricing-table {
   .pricing-table__row {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
+    border-bottom: 1px solid white;
+  }
+
+  .pricing-table__row--feature {
   }
 }

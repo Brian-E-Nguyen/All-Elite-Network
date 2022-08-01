@@ -3,8 +3,19 @@ import './LandingPricingTable.scss';
 
 const LandingPricingTable = () => {
   return (
-    <table className='pricing_table'>
-      <tbody>
+    <div className='pricing-table'>
+      <div className='pricing-table__row'>
+        <span>Stream live PPV events and Dark (Elevation) tapings</span>
+      </div>
+      <div className='pricing-table__row'>
+        <div className='pricing-table__col'>
+          <span>✓</span>
+        </div>
+        <div className='pricing-table__col'>
+          <span>✓</span>
+        </div>
+      </div>
+      {/* <tbody>
         <tr>
           <td>Monthly Price</td>
           <td>$4.99/month</td>
@@ -45,8 +56,8 @@ const LandingPricingTable = () => {
           <td></td>
           <td>✓</td>
         </tr>
-      </tbody>
-    </table>
+      </tbody> */}
+    </div>
   );
 };
 

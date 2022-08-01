@@ -1,7 +1,6 @@
-.pricing_table {
-  // border: 1px solid red;
-
-  td {
-    border-bottom: 1px solid red;
+.pricing-table {
+  .pricing-table__row {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }

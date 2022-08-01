@@ -1,42 +1,70 @@
-<h1 align='center'>All Elite Network</h1>
-<h2 align='center'>The unofficial streaming service for <br> All Elite Wrestling</h2>
+# Getting Started with Create React App
 
-Link to the website:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-https://all-elite-network.pages.dev/
+## Available Scripts
 
-## Background
+In the project directory, you can run:
 
-All Elite Wrestling (AEW) is an American wrestling company based in Jacksonville, Florida. Since its inception in 2019, AEW has changed the landscape of professional wrestling. It provided a great alternative for new and old wrestling fans, and is considered the second largest professional wrestling company behind Word Wrestling Entertainment (WWE).
+### `npm start`
 
-## Purpose
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-For years, fans have been wanting a streaming service that provides convenient access to live shows and archived content; this includes AEW's quarterly Pay-Per Views, weekly TV shows (Dynamite and Rampage), and weekly YouTube shows (Dark and Dark Elevation)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-The All Elite Network is the ultimate _unofficial_ streaming service for fans of All Elite Wrestling to access the AEW library of amazing content
+### `npm test`
 
-## Disclaimer
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-All Elite Network is a fan-made site and is not affiliated with All Elite Wrestling. The application is a mockup UI design for what the application would look like if it were to exist. Due to copyright, this application will not feature any replays of Pay-Per-Views and TV Shows (unless the full versions have been uploaded to the official AEW YouTube channel under the Fair Use license). All rights to the images and media in this app go to their respective owners
+### `npm run build`
 
-## Tech Stack
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- React JS
-- React Router
-- Sass
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Future Plans
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-This application is currently a work-in-progress. Below are aspects that I will include in the future:
+### `npm run eject`
 
-- Sign Up / login module
-- Search module
-- YouTube API to embed Dark / Dark Elevation videos
-- database to store media data and users
-- mobile design
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Images
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-![img1](./readme-img/img1.png)
-![img2](./readme-img/img2.png)
-![img3](./readme-img/img3.png)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

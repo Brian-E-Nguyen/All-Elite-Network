@@ -1,7 +1,11 @@
 import './App.css';
-
+import Navbar from './components/navbar/Navbar';
 function App() {
-  return <div className='App underline text-3xl'>TEST</div>;
+  return (
+    <div className='App '>
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;

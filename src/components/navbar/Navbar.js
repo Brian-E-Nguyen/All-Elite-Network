@@ -27,20 +27,22 @@ const Navbar = () => {
   };
   return (
     <nav className=" bg-red-500 w-full top-0 fixed z-10">
-      <div className="flex">
-        {ROUTES.map((route) => (
-          <span key={route.key}>
-            <NavLink
-              exact
-              className="transition-all duration-300 uppercase mx-3 font-bold hover:text-eliteGold"
-              activeClassName={'text-eliteGold'}
-              to={route.path}
-              onClick={buttonClickHandler}
-            >
-              {route.title}
-            </NavLink>
-          </span>
-        ))}
+      <div className="flex items-center justify-between h-16 flex-row py-3">
+        <div>
+          {ROUTES.map((route) => (
+            <span key={route.key}>
+              <NavLink
+                exact
+                className="transition-all duration-300 cursor-pointer uppercase mx-3 font-bold hover:text-eliteGold"
+                activeClassName={'text-eliteGold'}
+                to={route.path}
+                onClick={buttonClickHandler}
+              >
+                {route.title}
+              </NavLink>
+            </span>
+          ))}
+        </div>
       </div>
     </nav>
   );

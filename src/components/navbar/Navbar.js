@@ -26,13 +26,13 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className="bg-black">
-      <div className={isInMobileMenu ? 'navlinks mobile' : 'navlinks'}>
+    <nav className=" bg-red-500 w-full top-0 fixed z-10">
+      <div className="flex">
         {ROUTES.map((route) => (
           <span key={route.key}>
             <NavLink
               exact
-              className="transition-all duration-300 text-xl text-white uppercase mx-3 font-bold hover:text-eliteGold"
+              className="transition-all duration-300 uppercase mx-3 font-bold hover:text-eliteGold"
               activeClassName={'text-eliteGold'}
               to={route.path}
               onClick={buttonClickHandler}

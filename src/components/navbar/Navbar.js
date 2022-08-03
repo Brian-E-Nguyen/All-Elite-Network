@@ -26,7 +26,7 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className=" bg-red-500 w-full top-0 fixed z-10">
+    <nav className=" bg-red-500 text-white w-full top-0 fixed z-10">
       <div className="flex items-center justify-between h-16 flex-row py-3">
         {/* Left */}
         <div className="flex items-center">
@@ -45,7 +45,26 @@ const Navbar = () => {
           ))}
         </div>
         {/* Right */}
-        <div className="flex items-center">Test</div>
+        <div className="flex items-center">
+          <Search />
+          <Notifications />
+          <div
+            id="dropdown-button"
+            className="group"
+            onMouseEnter={dropdowmMenuHandler}
+            onMouseLeave={dropdowmMenuHandler}
+          >
+            <ArrowDropDown />
+            <div
+              className="invisible group-hover:visible"
+              onMouseEnter={dropdowmMenuHandler}
+              onMouseLeave={dropdowmMenuHandler}
+            >
+              <span>Settings</span>
+              <span>Logout</span>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
+import {
+  Search,
+  Notifications,
+  ArrowDropDown,
+  Menu,
+} from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 import ROUTES from '../../router/Routes';
 const Navbar = () => {
@@ -34,7 +39,7 @@ const Navbar = () => {
             <span key={route.key}>
               <NavLink
                 exact
-                className="transition-all duration-300 cursor-pointer uppercase mx-3 font-bold hover:text-eliteGold"
+                className="transition-all duration-300 cursor-pointer uppercase mx-3 font-bold hover:text-eliteGold xs:invisible lg:visible"
                 activeClassName={'text-eliteGold'}
                 to={route.path}
                 onClick={buttonClickHandler}
@@ -46,8 +51,8 @@ const Navbar = () => {
         </div>
         {/* Right */}
         <div className="flex items-center">
-          <Search />
-          <Notifications />
+          <Search className="xs:invisible lg:visible" />
+          <Notifications className="xs:invisible lg:visible" />
           <div
             id="dropdown-button"
             className="group"
@@ -56,7 +61,7 @@ const Navbar = () => {
           >
             <ArrowDropDown />
             <div
-              className="invisible group-hover:visible"
+              className="bg-gray-900 flex flex-col absolute right-0 invisible group-hover:visible"
               onMouseEnter={dropdowmMenuHandler}
               onMouseLeave={dropdowmMenuHandler}
             >
@@ -64,6 +69,7 @@ const Navbar = () => {
               <span>Logout</span>
             </div>
           </div>
+          <Menu className=" xs:visible lg:invisible" />
         </div>
       </div>
     </nav>

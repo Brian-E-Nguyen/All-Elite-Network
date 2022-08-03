@@ -28,7 +28,8 @@ const Navbar = () => {
   return (
     <nav className=" bg-red-500 w-full top-0 fixed z-10">
       <div className="flex items-center justify-between h-16 flex-row py-3">
-        <div>
+        {/* Left */}
+        <div className="flex items-center">
           {ROUTES.map((route) => (
             <span key={route.key}>
               <NavLink
@@ -43,6 +44,8 @@ const Navbar = () => {
             </span>
           ))}
         </div>
+        {/* Right */}
+        <div className="flex items-center">Test</div>
       </div>
     </nav>
   );

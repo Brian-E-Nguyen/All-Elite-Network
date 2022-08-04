@@ -31,19 +31,28 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className="container-fluid bg-red-500 text-white w-full top-0  fixed z-10">
-      <div className=" flex flex-nowrap items-center justify-between h-16  w-full flex-row py-3 px-4">
+    <nav className='container-fluid bg-red-500 text-white w-full top-0  fixed z-10'>
+      <div
+        className='flex flex-nowrap  items-center justify-between h-16 w-full py-3 px-4
+                      xs:flex-row-reverse
+                      md:flex-row'
+      >
         {/* Left */}
-        <div className="inline-flex pb-5 absolute top-0 translate-x-5 translate-y-5 flex-col text-left">
+        <div
+          className='flex pb-5 translate-x-5 flex-col transform 
+                        xs:text-left xs:absolute xs:top-1/2 xs:left-0 xs:transform  xs:translate-y-8
+                        md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3'
+        >
           {ROUTES.map((route) => (
             <span key={route.key}>
               <NavLink
                 exact
-                className="transition-all duration-300 
+                className='transition-all duration-300 
                           cursor-pointer 
                           uppercase mx-3 font-bold 
                           hover:text-eliteGold
-                          xs:text-3xl "
+                          xs:text-2xl
+                          md:text-lg '
                 activeClassName={'text-eliteGold'}
                 to={route.path}
                 onClick={buttonClickHandler}
@@ -54,18 +63,18 @@ const Navbar = () => {
           ))}
         </div>
         {/* Right */}
-        <div className="flex items-center border-solid border-4 border-red-100">
-          <Search className="xs:invisible lg:visible" />
-          <Notifications className="xs:invisible lg:visible" />
+        <div className='flex justify-items-end  border-solid border-4 border-red-100'>
+          <Search />
+          <Notifications />
           <div
-            id="dropdown-button"
-            className="group"
+            id='dropdown-button'
+            className='group'
             onMouseEnter={dropdowmMenuHandler}
             onMouseLeave={dropdowmMenuHandler}
           >
             <ArrowDropDown />
             <div
-              className="bg-gray-900 flex flex-col absolute right-0 invisible group-hover:visible"
+              className='bg-gray-900 flex flex-col absolute right-0 invisible group-hover:visible'
               onMouseEnter={dropdowmMenuHandler}
               onMouseLeave={dropdowmMenuHandler}
             >
@@ -73,7 +82,7 @@ const Navbar = () => {
               <span>Logout</span>
             </div>
           </div>
-          <Menu className="flex xs:visible lg:invisible" />
+          <Menu className='flex xs:visible md:invisible' />
         </div>
       </div>
     </nav>

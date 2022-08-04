@@ -14,6 +14,7 @@ const Navbar = () => {
 
   const buttonClickHandler = () => {
     setIsInMobileMenu((prevState) => !prevState);
+    console.log(isInMobileMenu);
   };
 
   const dropdowmMenuHandler = () => {
@@ -31,7 +32,7 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className='container-fluid bg-red-500 text-white w-full top-0  fixed z-10'>
+    <nav className='container-fluid bg-black text-white w-full top-0 py-3 fixed z-10'>
       <div
         className='flex flex-nowrap  items-center justify-between h-16 w-full py-3 px-4
                       xs:flex-row-reverse
@@ -39,9 +40,11 @@ const Navbar = () => {
       >
         {/* Left */}
         <div
-          className='flex pb-5  translate-x-5 flex-col transform 
-                        xs:text-right xs:absolute xs:top-1/2 xs:left-0 xs:transform xs:-translate-x-2 xs:translate-y-8 xs:w-full
-                        md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3 md:text-left'
+          className={`${
+            isInMobileMenu ? 'flex bg-black' : 'hidden'
+          } pb-5 translate-x-5 flex-col transform  
+              xs:text-right xs:absolute xs:top-1/2 xs:left-0 xs:transform xs:-translate-x-2 xs:translate-y-8 xs:w-full
+              md:flex md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3 md:text-left md:bg-none`}
         >
           {ROUTES.map((route) => (
             <span key={route.key}>
@@ -63,7 +66,7 @@ const Navbar = () => {
           ))}
         </div>
         {/* Right */}
-        <div className='flex justify-items-end  border-solid border-4 border-red-100'>
+        <div className='flex justify-items-end'>
           <Search />
           <Notifications />
           <div
@@ -82,7 +85,10 @@ const Navbar = () => {
               <span>Logout</span>
             </div>
           </div>
-          <Menu className='flex xs:visible md:invisible' />
+          <Menu
+            className='flex xs:visible md:invisible'
+            onClick={buttonClickHandler}
+          />
         </div>
       </div>
     </nav>

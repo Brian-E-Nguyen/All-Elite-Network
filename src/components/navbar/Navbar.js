@@ -39,9 +39,9 @@ const Navbar = () => {
       >
         {/* Left */}
         <div
-          className='flex pb-5 translate-x-5 flex-col transform 
-                        xs:text-left xs:absolute xs:top-1/2 xs:left-0 xs:transform  xs:translate-y-8
-                        md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3'
+          className='flex pb-5  translate-x-5 flex-col transform 
+                        xs:text-right xs:absolute xs:top-1/2 xs:left-0 xs:transform xs:-translate-x-2 xs:translate-y-8 xs:w-full
+                        md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3 md:text-left'
         >
           {ROUTES.map((route) => (
             <span key={route.key}>

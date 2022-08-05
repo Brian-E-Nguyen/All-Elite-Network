@@ -1,6 +1,6 @@
 import Home from '../views/Home';
 import PPV from '../views/PPV';
-import Dynamite from '../views/Dynamite.js';
+import Dynamite from '../views/Dynamite';
 import Rampage from '../views/Rampage';
 import Dark from '../views/Dark';
 import DarkElevation from '../views/DarkElevation';

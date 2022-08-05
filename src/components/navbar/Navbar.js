@@ -1,8 +1,12 @@
-import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
 import React, { useState } from 'react';
+import {
+  Search,
+  Notifications,
+  ArrowDropDown,
+  Menu,
+} from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 import ROUTES from '../../router/Routes';
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isInMobileMenu, setIsInMobileMenu] = useState(false);
@@ -27,63 +31,70 @@ const Navbar = () => {
     }
   };
   return (
-    <div
-      className={isScrolled || isInMobileMenu ? 'navbar scrolled' : 'navbar'}
-    >
-      <div className='container'>
-        <div className='left'>
-          <NavLink to='/'>
-            <img
-              src='https://upload.wikimedia.org/wikipedia/en/6/6d/All_Elite_Wrestling.jpg'
-              alt='All Elite Wrestling logo'
-            />
-          </NavLink>
-
-          <div className={isInMobileMenu ? 'navlinks mobile' : 'navlinks'}>
-            {ROUTES.map((route) => (
-              <span key={route.key}>
-                <NavLink
-                  exact
-                  className='navlink'
-                  activeClassName={'navlink active'}
-                  to={route.path}
-                  onClick={buttonClickHandler}
-                >
-                  {route.title}
-                </NavLink>
-              </span>
-            ))}
-          </div>
+    <nav className='container-fluid bg-gray-900 text-white w-full top-0 py-3 fixed z-10'>
+      <div
+        className='flex flex-nowrap  items-center justify-between h-16 w-full py-3 px-4
+                      xs:flex-row-reverse
+                      md:flex-row'
+      >
+        {/* Left */}
+        <div
+          className={`${
+            isInMobileMenu ? 'flex bg-gray-900' : 'hidden'
+          } pb-5 translate-x-5 flex-col transform  
+              xs:text-right xs:absolute xs:top-1/2 xs:left-0 xs:transform xs:-translate-x-2 xs:translate-y-8 xs:w-full
+              md:flex md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3 md:text-left md:bg-none`}
+        >
+          {ROUTES.map((route) => (
+            <span key={route.key}>
+              <NavLink
+                exact
+                className='transition-all duration-300 
+                          cursor-pointer 
+                          uppercase mx-3 font-bold 
+                          hover:text-eliteGold
+                          xs:text-2xl
+                          md:text-lg '
+                activeClassName={'text-eliteGold'}
+                to={route.path}
+                onClick={buttonClickHandler}
+              >
+                {route.title}
+              </NavLink>
+            </span>
+          ))}
         </div>
-        <div className='right'>
+        {/* Right */}
+        <div className='flex justify-items-end'>
           <Search />
           <Notifications />
           <div
             id='dropdown-button'
+            className='group'
             onMouseEnter={dropdowmMenuHandler}
             onMouseLeave={dropdowmMenuHandler}
           >
             <ArrowDropDown />
             <div
-              className='options'
+              className='bg-gray-800 px-3 py-1 rounded-md flex flex-col absolute right-0 -translate-x-3 invisible group-hover:visible'
               onMouseEnter={dropdowmMenuHandler}
               onMouseLeave={dropdowmMenuHandler}
             >
-              <span>Settings</span>
-              <span>Logout</span>
+              <span className=' hover:cursor-pointer hover:text-eliteGold'>
+                Settings
+              </span>
+              <span className='hover:cursor-pointer hover:text-eliteGold'>
+                Logout
+              </span>
             </div>
           </div>
-          <div
-            className={isInMobileMenu ? 'burger-btn active' : 'burger-btn'}
+          <Menu
+            className='flex xs:visible md:invisible'
             onClick={buttonClickHandler}
-          >
-            <div className='burger-btn__line'></div>
-            <div className='burger-btn__line'></div>
-            <div className='burger-btn__line'></div>
-          </div>
+          />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -32,7 +32,7 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className='container-fluid bg-black text-white w-full top-0 py-3 fixed z-10'>
+    <nav className='container-fluid bg-gray-900 text-white w-full top-0 py-3 fixed z-10'>
       <div
         className='flex flex-nowrap  items-center justify-between h-16 w-full py-3 px-4
                       xs:flex-row-reverse
@@ -41,7 +41,7 @@ const Navbar = () => {
         {/* Left */}
         <div
           className={`${
-            isInMobileMenu ? 'flex bg-black' : 'hidden'
+            isInMobileMenu ? 'flex bg-gray-900' : 'hidden'
           } pb-5 translate-x-5 flex-col transform  
               xs:text-right xs:absolute xs:top-1/2 xs:left-0 xs:transform xs:-translate-x-2 xs:translate-y-8 xs:w-full
               md:flex md:relative md:flex-row md:top-0 md:left-0 md:transform md:-translate-x-0 md:translate-y-3 md:text-left md:bg-none`}
@@ -77,12 +77,16 @@ const Navbar = () => {
           >
             <ArrowDropDown />
             <div
-              className='bg-gray-900 flex flex-col absolute right-0 invisible group-hover:visible'
+              className='bg-gray-800 px-3 py-1 rounded-md flex flex-col absolute right-0 -translate-x-3 invisible group-hover:visible'
               onMouseEnter={dropdowmMenuHandler}
               onMouseLeave={dropdowmMenuHandler}
             >
-              <span>Settings</span>
-              <span>Logout</span>
+              <span className=' hover:cursor-pointer hover:text-eliteGold'>
+                Settings
+              </span>
+              <span className='hover:cursor-pointer hover:text-eliteGold'>
+                Logout
+              </span>
             </div>
           </div>
           <Menu

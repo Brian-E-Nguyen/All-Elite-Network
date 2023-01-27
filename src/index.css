@@ -138,7 +138,7 @@ table {
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   background-color: #1f1f1f;
   color: #efefef;
   line-height: 24px;
@@ -147,4 +147,10 @@ table {
 body {
   min-height: 100vh;
   margin: 16px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
 }

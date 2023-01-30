@@ -1,18 +1,23 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faCheck);
+
 export default function Plans() {
-  // TODO: map divs
   return (
     <section>
       {/* Plans */}
       <div className='grid xs:grid-cols-2 grid-cols-3 border-solid border-t-2 border-white-100'>
-        <span className='my-3 xs:col-span-2 xs:text-center md:col-span-1 md:text-left'>
+        <h3 className='text-xl my-3 xs:col-span-2 xs:text-center md:col-span-1 md:text-left'>
           Plan
-        </span>
-        <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
+        </h3>
+        <h3 className='text-xl my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
           Standard Plan
-        </span>
-        <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
+        </h3>
+        <h3 className='text-xl my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
           All-Elite Plan
-        </span>
+        </h3>
       </div>
 
       {/* Monthly Price */}
@@ -34,10 +39,10 @@ export default function Plans() {
           Livestream any PPV event
         </span>
         <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
-          Section 2
+          <FontAwesomeIcon icon='check' color='#ffe2a5' size='lg' />
         </span>
         <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
-          Section 3
+          <FontAwesomeIcon icon='check' color='#ffe2a5' size='lg' />
         </span>
       </div>
 
@@ -47,10 +52,36 @@ export default function Plans() {
           Access TV shows after they air
         </span>
         <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
-          Section 2
+          <FontAwesomeIcon icon='check' color='#ffe2a5' size='lg' />
         </span>
         <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
-          Section 3
+          <FontAwesomeIcon icon='check' color='#ffe2a5' size='lg' />
+        </span>
+      </div>
+
+      {/* Advertisements*/}
+      <div className='grid xs:grid-cols-2 grid-cols-3 border-solid border-t-2 border-white-100'>
+        <span className='my-3 xs:col-span-2 xs:text-center md:col-span-1 md:text-left'>
+          Advertisements
+        </span>
+        <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
+          Limited to announcements and future events
+        </span>
+        <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
+          Toggle on or off
+        </span>
+      </div>
+
+      {/* Mobile downloads */}
+      <div className='grid xs:grid-cols-2 grid-cols-3 border-solid border-t-2 border-white-100'>
+        <span className='my-3 xs:col-span-2 xs:text-center md:col-span-1 md:text-left'>
+          VOD downloads to your mobile device
+        </span>
+        <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
+          —
+        </span>
+        <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
+          <FontAwesomeIcon icon='check' color='#ffe2a5' size='lg' />
         </span>
       </div>
 
@@ -60,10 +91,10 @@ export default function Plans() {
           Access to select content from Honor Club*
         </span>
         <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
-          Section 2
+          —
         </span>
         <span className='my-3 xs:col-span-1 xs:text-center md:col-span-1 md:text-left'>
-          Section 3
+          <FontAwesomeIcon icon='check' color='#ffe2a5' size='lg' />
         </span>
       </div>
     </section>

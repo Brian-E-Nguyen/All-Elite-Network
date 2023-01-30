@@ -10,7 +10,7 @@ export default function LibraryCard(props) {
         src={e}
         alt=''
       />
-      <div className='absolute bottom-0'>
+      <div className='absolute bottom-0 mx-4'>
         <h2>All Elite Network</h2>
       </div>
     </div>

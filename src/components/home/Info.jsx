@@ -1,6 +1,6 @@
 export default function Info() {
   return (
-    <section className='grid gap-4 lg:grid-cols-2 sm:grid-cols-1 justify-center'>
+    <section className='grid gap-4 lg:grid-cols-2 sm:grid-cols-1 justify-center mb-32'>
       <div>
         <h2>The Wrestling Streaming Service You've Been Waiting For</h2>
         <div className='text-xl'>

@@ -10,6 +10,7 @@ export default function LibraryCardList() {
     'items-center',
     'justify-center',
     'text-center',
+    'mb-32',
   ].join(' ');
 
   return (

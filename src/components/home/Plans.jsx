@@ -6,7 +6,7 @@ library.add(faCheck);
 
 export default function Plans() {
   return (
-    <>
+    <div className='mb-32'>
       <section className='text-center'>
         <h2>Plans</h2>
         <p>Below are the different plans to suit your needs</p>
@@ -111,6 +111,6 @@ export default function Plans() {
           select number of media included from Honor Club.
         </p>
       </section>
-    </>
+    </div>
   );
 }

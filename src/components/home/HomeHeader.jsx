@@ -1,8 +1,14 @@
-import React from 'react';
+import { homeFeaturedData } from '../../data/FeaturedData';
 
 export default function HomeHeader() {
+  console.log(homeFeaturedData);
   return (
-    <section className='relative h-96 text-center bg-slate-500'>
+    <section className='relative h-96 text-center'>
+      <img
+        src={homeFeaturedData.src}
+        alt={homeFeaturedData.alt}
+        className='h-full object-cover w-screen brightness-50'
+      />
       <div className='absolute inset-0 flex items-center justify-center'>
         <div>
           <h1>All Elite Wrestling: Now Available on Demand</h1>

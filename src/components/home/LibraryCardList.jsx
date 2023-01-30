@@ -1,4 +1,5 @@
 import LibraryCard from './LibraryCard';
+import cardData from '../../data/LibraryCardData';
 
 export default function LibraryCardList() {
   const gridContainer = [
@@ -13,10 +14,9 @@ export default function LibraryCardList() {
 
   return (
     <section className={gridContainer}>
-      <LibraryCard />
-      <LibraryCard />
-      <LibraryCard />
-      <LibraryCard />
+      {cardData.map((data, i) => (
+        <LibraryCard title={data.title} src={data.src} alt={data.alt} key={i} />
+      ))}
     </section>
   );
 }

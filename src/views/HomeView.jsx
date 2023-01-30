@@ -5,11 +5,13 @@ import HomeHeader from '../components/home/HomeHeader';
 
 export default function HomeView() {
   return (
-    <div className='container sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto'>
+    <>
       <HomeHeader />
-      <ShowCards />
-      <Info />
-      <Plans />
-    </div>
+      <div className='container sm:w-3/4 md:w-2/3 lg:w-screen mx-auto'>
+        <ShowCards />
+        <Info />
+        <Plans />
+      </div>
+    </>
   );
 }

@@ -3,7 +3,7 @@ import { homeFeaturedData } from '../../data/FeaturedData';
 export default function HomeHeader() {
   console.log(homeFeaturedData);
   return (
-    <section className='relative h-96 text-center'>
+    <section className='relative text-center' style={{ height: '80vh' }}>
       <img
         src={homeFeaturedData.src}
         alt={homeFeaturedData.alt}
@@ -16,6 +16,7 @@ export default function HomeHeader() {
             Get access to the extensive All Elite Wrestling digital library,
             including PPV's, Dynamite, Rampage, Dark (Elevation), and more
           </p>
+          <button>Sign Up Now</button>
         </div>
       </div>
     </section>

@@ -7,6 +7,10 @@ library.add(faCheck);
 export default function Plans() {
   return (
     <>
+      <section className='text-center'>
+        <h2>Plans</h2>
+        <p>Below are the different plans to suit your needs</p>
+      </section>
       <section>
         {/* Plans */}
         <div className='grid xs:grid-cols-2 grid-cols-3 border-solid border-t-2 border-white-100'>

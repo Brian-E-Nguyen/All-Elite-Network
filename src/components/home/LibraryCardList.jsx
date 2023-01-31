@@ -14,10 +14,24 @@ export default function LibraryCardList() {
   ].join(' ');
 
   return (
-    <section className={gridContainer}>
-      {cardData.map((data, i) => (
-        <LibraryCard title={data.title} src={data.src} alt={data.alt} key={i} />
-      ))}
+    <section className='mt-10'>
+      <div className='text-center'>
+        <h2 className='text-elite-gold-light text-sm uppercase my-6'>
+          Included in all plans
+        </h2>
+        <span className='text-5xl font-bold'>All The Shows You Love</span>
+        <p>Get access to 500(+) hours of AEW's extensive library.</p>
+      </div>
+      <div className={gridContainer}>
+        {cardData.map((data, i) => (
+          <LibraryCard
+            title={data.title}
+            src={data.src}
+            alt={data.alt}
+            key={i}
+          />
+        ))}
+      </div>
     </section>
   );
 }

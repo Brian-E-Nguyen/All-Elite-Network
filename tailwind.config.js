@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -12,6 +13,10 @@ module.exports = {
     colors: {
       'elite-gold-dark': '#b19534',
       'elite-gold-light': '#e2b20a',
+      yellow: colors.yellow,
+      red: colors.red,
+      black: colors.black,
+      neutral: colors.neutral,
     },
     extend: {},
   },

@@ -9,6 +9,10 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+    colors: {
+      'elite-gold-dark': '#b19534',
+      'elite-gold-light': '#e2b20a',
+    },
     extend: {},
   },
   plugins: [],

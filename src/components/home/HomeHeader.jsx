@@ -12,11 +12,12 @@ export default function HomeHeader() {
       <div className='absolute inset-0 flex items-center justify-center'>
         <div>
           <h1>All Elite Wrestling: Now Available on Demand</h1>
-          <p>
-            Get access to the extensive All Elite Wrestling digital library,
-            including PPV's, Dynamite, Rampage, Dark (Elevation), and more
+          <p className='text-lg'>
+            Welcome to the All-Elite Network. Get access to the extensive All
+            Elite Wrestling digital library, including PPV's, Dynamite, Rampage,
+            Dark (Elevation), and more
           </p>
-          <button>Sign Up Now</button>
+          <button className='w-1/2 py-5'>Sign Up Now</button>
         </div>
       </div>
     </section>

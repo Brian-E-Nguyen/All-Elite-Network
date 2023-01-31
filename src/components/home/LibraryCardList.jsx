@@ -11,11 +11,13 @@ export default function LibraryCardList() {
     'justify-center',
     'text-center',
     'mb-32',
+    'container',
+    'mx-auto',
   ].join(' ');
 
   return (
-    <section className='mt-10'>
-      <div className='text-center'>
+    <section className='bg-neutral-900 py-1'>
+      <div className='container sm:w-3/4 md:w-2/3 lg:w-screen mx-auto text-center'>
         <h2 className='text-elite-gold-light text-sm uppercase my-6'>
           Included in all plans
         </h2>

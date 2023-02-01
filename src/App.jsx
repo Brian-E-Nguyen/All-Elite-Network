@@ -6,8 +6,7 @@ import HomeView from './views/HomeView';
 function App() {
   return (
     <div className='App'>
-      <Navbar />
-      <RenderRoutes />
+      <HomeView />
       <Footer />
     </div>
   );

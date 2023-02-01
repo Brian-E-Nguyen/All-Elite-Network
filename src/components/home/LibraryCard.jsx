@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function LibraryCard(props) {
   return (
-    <div className='relative'>
+    <div className='relative hover:cursor-pointer'>
       <img
-        className='relative object-cover rounded-md brightness-50'
+        className='relative object-cover rounded-md transition duration-300 brightness-50 hover:brightness-75'
         src={props.src}
         loading='lazy'
         alt={props.alt}

@@ -6,6 +6,7 @@ export default function LibraryCard(props) {
       <img
         className='relative object-cover rounded-md brightness-50'
         src={props.src}
+        loading='lazy'
         alt={props.alt}
       />
       <div className='absolute bottom-0 mx-4'>

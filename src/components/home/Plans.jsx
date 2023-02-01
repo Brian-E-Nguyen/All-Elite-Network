@@ -7,7 +7,7 @@ library.add(faCheck);
 export default function Plans() {
   return (
     <section className='bg-neutral-900 py-4'>
-      <section className='container sm:w-3/4 md:w-2/3 lg:w-screen mx-auto mb-32'>
+      <section className='container sm:w-3/4 md:w-2/3 lg:w-screen mx-auto mb-32 px-3'>
         <div className='text-center'>
           <h2 className='text-sm text-elite-gold-light uppercase'>Plans</h2>
           <span className='text-4xl font-bold'>

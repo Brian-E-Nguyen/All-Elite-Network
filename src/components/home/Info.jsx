@@ -2,7 +2,7 @@ export default function Info() {
   return (
     <section className='bg-neutral-900 py-4'>
       <div className='container sm:w-3/4 md:w-2/3 lg:w-screen mx-auto'>
-        <div className='grid gap-4 lg:grid-cols-2 sm:grid-cols-1 justify-center mb-32'>
+        <div className='grid gap-4 lg:grid-cols-2 sm:grid-cols-1 justify-center px-3 mb-32'>
           {/* Section 1 */}
           <div>
             <h2>The Wrestling Streaming Service You've Been Waiting For</h2>

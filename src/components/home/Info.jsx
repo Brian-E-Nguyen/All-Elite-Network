@@ -41,8 +41,11 @@ export default function Info() {
             </p>
           </div>
           <div>
-            {/* Add image */}
-            <img src='' alt='temp' />
+            <img
+              src='https://res.cloudinary.com/buraiyen/image/upload/v1675279461/All_Elite_Network/Young-Bucks-AEW-Revolution_fnwa6o.webp'
+              alt='Nick Jackson kicking Kenny Omega'
+              loading='lazy'
+            />
           </div>
 
           {/* Section 2 */}
@@ -51,8 +54,10 @@ export default function Info() {
             <p className='text-2xl'>Available on the All-Elite Plan</p>
           </div>
           <div>
-            {/* Add image */}
-            <img src='' alt='temp' />
+            <img
+              src='https://res.cloudinary.com/buraiyen/image/upload/v1675279774/All_Elite_Network/Hikaru-Shida-hitting-a-knee-strike-on-Tay-Conti-Cropped_sxmun4.webp'
+              alt='Hikaru Shida hitting a knee strike on Tay Melo'
+            />
           </div>
         </div>
       </div>

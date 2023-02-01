@@ -9,7 +9,19 @@ export default function Footer() {
             className='w-60'
           />
         </div>
-        <div>Gigatummy</div>
+        <div className='text-center'>
+          <p>
+            All Elite Network is a fan made site and is in no way affiliated or
+            sponsored by All Elite Wrestling. All media is property of All Elite
+            Wrestling or their respective owners
+          </p>
+          <p>
+            See an issue?{' '}
+            <a href='' className='text-elite-gold-dark font-thin'>
+              Let me know or submit a pull request!
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

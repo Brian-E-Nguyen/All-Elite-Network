@@ -29,6 +29,7 @@ export default function Info() {
               src='https://res.cloudinary.com/buraiyen/image/upload/v1675106463/All_Elite_Network/adam-page-dynamite-october-6-1200x675_zltdbt.webp'
               alt='Wrestler "Hangman" Adam Page standing on a ladder, eyeing the crowd after winning a ladder match'
               loading='lazy'
+              className='rounded-md'
             />
           </div>
 
@@ -42,21 +43,24 @@ export default function Info() {
           </div>
           <div>
             <img
-              src='https://res.cloudinary.com/buraiyen/image/upload/v1675279461/All_Elite_Network/Young-Bucks-AEW-Revolution_fnwa6o.webp'
-              alt='Nick Jackson kicking Kenny Omega'
+              src='https://res.cloudinary.com/buraiyen/image/upload/v1675279774/All_Elite_Network/Hikaru-Shida-hitting-a-knee-strike-on-Tay-Conti-Cropped_sxmun4.webp'
+              alt='Hikaru Shida hitting a knee strike on Tay Melo'
               loading='lazy'
+              className='rounded-md'
             />
           </div>
 
-          {/* Section 2 */}
+          {/* Section 3 */}
           <div>
             <h2>Download VODs to watch offline</h2>
             <p className='text-2xl'>Available on the All-Elite Plan</p>
           </div>
           <div>
             <img
-              src='https://res.cloudinary.com/buraiyen/image/upload/v1675279774/All_Elite_Network/Hikaru-Shida-hitting-a-knee-strike-on-Tay-Conti-Cropped_sxmun4.webp'
-              alt='Hikaru Shida hitting a knee strike on Tay Melo'
+              src='https://res.cloudinary.com/buraiyen/image/upload/v1675279461/All_Elite_Network/Young-Bucks-AEW-Revolution_fnwa6o.webp'
+              alt='Nick Jackson kicking Kenny Omega'
+              loading='lazy'
+              className='rounded-md'
             />
           </div>
         </div>

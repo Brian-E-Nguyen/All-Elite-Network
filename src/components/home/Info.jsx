@@ -3,6 +3,7 @@ export default function Info() {
     <section className='bg-neutral-900 py-4'>
       <div className='container sm:w-3/4 md:w-2/3 lg:w-screen mx-auto'>
         <div className='grid gap-4 lg:grid-cols-2 sm:grid-cols-1 justify-center mb-32'>
+          {/* Section 1 */}
           <div>
             <h2>The Wrestling Streaming Service You've Been Waiting For</h2>
             <div className='text-xl'>
@@ -29,6 +30,29 @@ export default function Info() {
               alt='Wrestler "Hangman" Adam Page standing on a ladder, eyeing the crowd after winning a ladder match'
               loading='lazy'
             />
+          </div>
+
+          {/* Section 2 */}
+          <div>
+            <h2>Enjoy on you TV</h2>
+            <p className='text-2xl'>
+              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+              Blu-ray players, and more.
+            </p>
+          </div>
+          <div>
+            {/* Add image */}
+            <img src='' alt='temp' />
+          </div>
+
+          {/* Section 2 */}
+          <div>
+            <h2>Download VODs to watch offline</h2>
+            <p className='text-2xl'>Available on the All-Elite Plan</p>
+          </div>
+          <div>
+            {/* Add image */}
+            <img src='' alt='temp' />
           </div>
         </div>
       </div>

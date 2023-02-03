@@ -11,14 +11,14 @@ export default function MediaCard(props) {
     <div
       onClick={clickHandler}
       className={
-        'w-[270px] h-[120px] bg-black px-4 overflow-hidden transition duration-300 ease-in-out hover:cursor-pointer ' +
-        (isOpen ? 'h-[380px]' : '')
+        'w-[300px] h-[160px] bg-black px-4 overflow-hidden transition duration-300 ease-in-out hover:cursor-pointer ' +
+        (isOpen ? 'h-[400px]' : '')
       }
     >
       <img
         src={props.show.imgSrc}
         alt=''
-        className='w-full h-[120px] bg-cover'
+        className='w-full h-[160px] bg-cover transition duration-300 hover:brightness-50'
       />
       <div className='my-4'>
         <h2 className='text-lg'>{props.show.title}</h2>

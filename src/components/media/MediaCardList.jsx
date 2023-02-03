@@ -15,7 +15,7 @@ export default function MediaCardList({ shows }) {
   return (
     <section className={gridContainer}>
       {shows.map((show, i) => (
-        <MediaCard show={show} />
+        <MediaCard show={show} key={i} />
       ))}
     </section>
   );

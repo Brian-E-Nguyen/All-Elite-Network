@@ -1,4 +1,4 @@
-import Featured from '../components/ui/jumbotron/Jumbotron';
+import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import {
   payperview,
@@ -11,7 +11,7 @@ import {
 function FeaturedView() {
   return (
     <>
-      <Featured />
+      <Jumbotron />
       <MediaCardList shows={payperview} />
       <MediaCardList shows={dynamite} />
       <MediaCardList shows={rampage} />

@@ -1,7 +1,8 @@
 import React from 'react';
 
-function Jumbotron() {
-  const tempImage =
+function Jumbotron(props) {
+  const jumboImg =
+    props.src ??
     'https://images.unsplash.com/photo-1524633412778-878453ef0cd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80';
   return (
     <div className='relative sm:h-[40vh] md:h-[55vh] lg:h-[80vh]'>
@@ -20,11 +21,11 @@ function Jumbotron() {
       </section>
       {/* Jumbotron image */}
       <picture>
-        <source srcSet={tempImage} media='(min-width: 600px)' />
+        <source srcSet={jumboImg} media='(min-width: 600px)' />
         <img
           className='h-full object-cover w-screen brightness-50'
-          src={tempImage}
-          lazy-src={tempImage}
+          src={jumboImg}
+          lazy-src={jumboImg}
           alt=''
           decoding='async'
           rel='preload'

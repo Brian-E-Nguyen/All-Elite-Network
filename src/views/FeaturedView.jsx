@@ -1,5 +1,6 @@
 import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
+import Navbar from '../components/ui/navbar/Navbar';
 import {
   payperview,
   dynamite,
@@ -13,6 +14,7 @@ function FeaturedView() {
   const jumboDescription = payperview[0].description;
   return (
     <>
+      <Navbar />
       <Jumbotron src={jumboImg} description={jumboDescription} />
       <MediaCardList shows={payperview} showName='Pay Per View' />
       <MediaCardList shows={dynamite} showName='Dynamite' />

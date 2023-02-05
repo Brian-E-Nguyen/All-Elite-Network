@@ -5,13 +5,11 @@ export default function MediaCardList(props) {
     'grid',
     'gap-4',
     'grid-cols-1',
-    'items-center',
     'justify-center',
     'md:grid-cols-2',
     'lg:grid-cols-4',
     'mb-32',
     'mx-auto',
-    'my-auto',
   ].join(' ');
 
   const { shows, showName } = props;

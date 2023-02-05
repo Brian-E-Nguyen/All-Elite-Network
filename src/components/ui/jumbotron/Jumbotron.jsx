@@ -8,8 +8,10 @@ function Jumbotron(props) {
     <div className='relative sm:h-[40vh] md:h-[55vh] lg:h-[80vh]'>
       {/* Info section */}
       <section className='absolute bottom-10 z-10 w-1/2 m-5'>
-        <h1 className='text-4xl'>{props.title}</h1>
-        <p className='text-xl'>{props.description}</p>
+        <h1 className='xs:text-lg sm:text-xl md:text-2xl lg:text-4xl'>
+          {props.title}
+        </h1>
+        <p className='xs:hidden sm:text-lg'>{props.description}</p>
         <div>
           <button className='mr-2'>Play</button>
           <button>Info</button>

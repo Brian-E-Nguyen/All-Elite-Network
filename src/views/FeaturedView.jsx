@@ -9,9 +9,11 @@ import {
 } from '../data/MediaListData';
 
 function FeaturedView() {
+  const jumboImg = payperview[0].imgSrc;
+  const jumboDescription = payperview[0].description;
   return (
     <>
-      <Jumbotron />
+      <Jumbotron src={jumboImg} description={jumboDescription} />
       <MediaCardList shows={payperview} showName='Pay Per View' />
       <MediaCardList shows={dynamite} showName='Dynamite' />
       <MediaCardList shows={rampage} showName='Rampage' />

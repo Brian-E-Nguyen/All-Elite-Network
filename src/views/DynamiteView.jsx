@@ -5,11 +5,16 @@ import { dynamite } from '../data/MediaListData';
 
 function DynamiteView() {
   const jumboImg = dynamite[0].imgSrc;
+  const jumboTitle = dynamite[0].title;
   const jumboDescription = dynamite[0].description;
   return (
     <>
       <Navbar />
-      <Jumbotron src={jumboImg} description={jumboDescription} />
+      <Jumbotron
+        src={jumboImg}
+        title={jumboTitle}
+        description={jumboDescription}
+      />
       <section className='container mx-auto'>
         <h1 className='text-center'>AEW Dynamite</h1>
         <p className='text-xl'>

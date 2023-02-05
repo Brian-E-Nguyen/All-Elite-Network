@@ -9,7 +9,7 @@ import {
   darkElevation,
 } from '../data/MediaListData';
 
-function FeaturedView() {
+function FeaturedPage() {
   const jumboImg = payperview[0].imgSrc;
   const jumboDescription = payperview[0].description;
   return (
@@ -25,4 +25,4 @@ function FeaturedView() {
   );
 }
 
-export default FeaturedView;
+export default FeaturedPage;

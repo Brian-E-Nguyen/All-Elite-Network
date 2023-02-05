@@ -1,4 +1,4 @@
-import Featured from '../components/ui/Featured';
+import Featured from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import {
   payperview,

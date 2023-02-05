@@ -12,11 +12,11 @@ function FeaturedView() {
   return (
     <>
       <Jumbotron />
-      <MediaCardList shows={payperview} />
-      <MediaCardList shows={dynamite} />
-      <MediaCardList shows={rampage} />
-      <MediaCardList shows={dark} />
-      <MediaCardList shows={darkElevation} />
+      <MediaCardList shows={payperview} showName='Pay Per View' />
+      <MediaCardList shows={dynamite} showName='Dynamite' />
+      <MediaCardList shows={rampage} showName='Rampage' />
+      <MediaCardList shows={dark} showName='Dark' />
+      <MediaCardList shows={darkElevation} showName='Dark Elevation' />
     </>
   );
 }

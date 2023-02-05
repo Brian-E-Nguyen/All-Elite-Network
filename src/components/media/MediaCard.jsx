@@ -11,7 +11,7 @@ export default function MediaCard(props) {
     <div
       onClick={clickHandler}
       className={
-        'w-[300px] h-[160px] bg-black px-4 overflow-hidden transition duration-300 ease-in-out hover:cursor-pointer ' +
+        'w-[300px] h-[160px] mx-6 bg-black px-4 overflow-hidden transition duration-300 ease-in-out hover:cursor-pointer ' +
         (isOpen ? 'h-[400px]' : '')
       }
     >

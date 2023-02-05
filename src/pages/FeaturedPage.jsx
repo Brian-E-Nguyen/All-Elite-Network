@@ -11,11 +11,17 @@ import {
 
 function FeaturedPage() {
   const jumboImg = payperview[0].imgSrc;
+  const jumboTitle = payperview[0].title;
   const jumboDescription = payperview[0].description;
+
   return (
     <>
       <Navbar />
-      <Jumbotron src={jumboImg} description={jumboDescription} />
+      <Jumbotron
+        src={jumboImg}
+        title={jumboTitle}
+        description={jumboDescription}
+      />
       <MediaCardList shows={payperview} showName='Pay Per View' />
       <MediaCardList shows={dynamite} showName='Dynamite' />
       <MediaCardList shows={rampage} showName='Rampage' />

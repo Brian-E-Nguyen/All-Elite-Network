@@ -1,4 +1,5 @@
 import { homeFeaturedData } from '../../data/FeaturedData';
+import { Link } from 'react-router-dom';
 
 export default function HomeHeader() {
   return (
@@ -22,7 +23,7 @@ export default function HomeHeader() {
             Sign Up Now
           </button>
           <p className='font-bold'>
-            Already have an account? <a href='#'>Login here!</a>
+            Already have an account? <Link to='/login'>Login here!</Link>
           </p>
         </div>
       </div>

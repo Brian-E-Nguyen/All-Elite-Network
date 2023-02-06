@@ -3,6 +3,7 @@ import FeaturedPage from '../pages/FeaturedPage';
 import DynamitePage from '../pages/DynamitePage';
 import PPVPage from '../pages/PPVPage';
 import RampagePage from '../pages/RampagePage';
+import DarkAndDarkElevationPage from '../pages/DarkAndDarkElevationPage';
 
 const Routes = [
   { title: 'Home', path: '/', exact: true, key: 'Home', component: HomePage },
@@ -29,6 +30,12 @@ const Routes = [
     path: '/rampage',
     key: 'Rampage',
     component: RampagePage,
+  },
+  {
+    title: 'Dark and Dark Elevation',
+    path: '/dark',
+    key: 'Dark and Dark Elevation',
+    component: DarkAndDarkElevationPage,
   },
 ];
 

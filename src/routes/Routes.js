@@ -2,6 +2,7 @@ import HomePage from '../pages/HomePage';
 import FeaturedPage from '../pages/FeaturedPage';
 import DynamitePage from '../pages/DynamitePage';
 import PPVPage from '../pages/PPVPage';
+import RampagePage from '../pages/RampagePage';
 
 const Routes = [
   { title: 'Home', path: '/', exact: true, key: 'Home', component: HomePage },
@@ -22,6 +23,12 @@ const Routes = [
     path: '/dynamite',
     key: 'Dyanmite',
     component: DynamitePage,
+  },
+  {
+    title: 'Rampage',
+    path: '/rampage',
+    key: 'Rampage',
+    component: RampagePage,
   },
 ];
 

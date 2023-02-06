@@ -21,7 +21,12 @@ function Navbar() {
         <ul>
           {navLinks.map((link, i) => (
             <li className='inline mx-4 text-xl font-bold' key={i}>
-              <NavLink exact to={link.path} key={i}>
+              <NavLink
+                exact
+                to={link.path}
+                key={i}
+                className='text-neutral-300 text-decoration-none no-underline uppercase'
+              >
                 {link.title}
               </NavLink>
             </li>

@@ -11,7 +11,7 @@ function Navbar() {
     'Dark / Dark Elevation',
   ];
   return (
-    <nav className='flex items-center justify-between bg-yellow-700 py-9'>
+    <nav className='flex items-center justify-between bg-neutral-800 py-2'>
       <div className='mx-12'>
         <img
           src='https://res.cloudinary.com/buraiyen/image/upload/v1675282964/All_Elite_Network/aew-logo_fpfxqw.png'
@@ -23,7 +23,7 @@ function Navbar() {
       <div className='hidden md:block'>
         <ul>
           {navLinks.map((link, i) => (
-            <li className='inline mx-4 text-lg font-bold' key={i}>
+            <li className='inline mx-4 text-xl font-bold' key={i}>
               {link}
             </li>
           ))}

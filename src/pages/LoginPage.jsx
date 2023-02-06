@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { homeFeaturedData } from '../data/FeaturedData';
 
 function LoginPage() {
@@ -20,14 +21,18 @@ function LoginPage() {
           <input
             type='email'
             placeholder='Email'
-            class='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
+            className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
           />
           <input
             type='Password'
             placeholder='Password'
-            class='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-4'
+            className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-4'
           />
-          <button>Login</button>
+          <button className='w-[70%]'>
+            <Link to='/featured' className='text-neutral-900 no-underline'>
+              Login
+            </Link>
+          </button>
         </form>
       </section>
     </>

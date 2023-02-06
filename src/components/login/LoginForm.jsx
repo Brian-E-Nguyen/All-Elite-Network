@@ -1,9 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function LoginForm() {
+  const [formData, setFormData] = useState({ email: '', password: '' });
   function submitHandler(event) {
     event.preventDefault();
+  }
+
+  function inputChangeHandler(event) {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   }
 
   return (
@@ -16,18 +21,18 @@ function LoginForm() {
         <input
           type='email'
           placeholder='Email'
+          name='email'
           className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
+          onChange={inputChangeHandler}
         />
         <input
           type='Password'
           placeholder='Password'
+          name='password'
           className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-4'
+          onChange={inputChangeHandler}
         />
-        <button className='w-[70%]'>
-          <Link to='/featured' className='text-neutral-900 no-underline'>
-            Login
-          </Link>
-        </button>
+        <button className='w-[70%]'>Login</button>
       </form>
     </section>
   );

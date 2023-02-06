@@ -1,9 +1,16 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const history = useHistory();
+
   function submitHandler(event) {
     event.preventDefault();
+    if (!formData.email || !formData.password) {
+      return console.log('missing data');
+    }
+    history.push('/featured');
   }
 
   function inputChangeHandler(event) {

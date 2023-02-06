@@ -10,7 +10,14 @@ function LoginForm() {
     if (!formData.email || !formData.password) {
       return console.log('missing data');
     }
-    history.push('/featured');
+
+    if (
+      formData.email === import.meta.env.VITE_ADMIN_USERNAME &&
+      formData.password === import.meta.env.VITE_ADMIN_PASSWORD
+    ) {
+      return history.push('/featured');
+    }
+    return history.push('/featured');
   }
 
   function inputChangeHandler(event) {

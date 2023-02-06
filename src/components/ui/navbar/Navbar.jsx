@@ -1,15 +1,12 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import NavbarMobileButton from './NavbarMobileButton';
+import navLinks from './navLinks';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = [
-    'Home',
-    'PPV',
-    'Dynamite',
-    'Rampage',
-    'Dark / Dark Elevation',
-  ];
+
   return (
     <nav className='flex items-center justify-between bg-neutral-800 py-2'>
       <div className='mx-12'>
@@ -24,7 +21,9 @@ function Navbar() {
         <ul>
           {navLinks.map((link, i) => (
             <li className='inline mx-4 text-xl font-bold' key={i}>
-              {link}
+              <NavLink exact to={link.path} key={i}>
+                {link.title}
+              </NavLink>
             </li>
           ))}
         </ul>

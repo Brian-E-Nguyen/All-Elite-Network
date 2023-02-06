@@ -13,7 +13,12 @@ function Navbar() {
   return (
     <nav className='flex items-center justify-between bg-yellow-700 py-9'>
       <div className='mx-12'>
-        <img src='' alt='AEW Logo' />
+        <img
+          src='https://res.cloudinary.com/buraiyen/image/upload/v1675282964/All_Elite_Network/aew-logo_fpfxqw.png'
+          loading='lazy'
+          className='w-[125px]'
+          alt='AEW Logo'
+        />
       </div>
       <div className='hidden md:block'>
         <ul>

@@ -5,6 +5,7 @@ import PPVPage from '../pages/PPVPage';
 import RampagePage from '../pages/RampagePage';
 import DarkAndDarkElevationPage from '../pages/DarkAndDarkElevationPage';
 import LoginPage from '../pages/LoginPage';
+import SignupPage from '../pages/SignupPage';
 
 const Routes = [
   { title: 'Home', path: '/', exact: true, key: 'Home', component: HomePage },
@@ -43,6 +44,12 @@ const Routes = [
     path: '/login',
     key: 'login',
     component: LoginPage,
+  },
+  {
+    title: 'Sign Up',
+    path: '/signup',
+    key: 'signup',
+    component: SignupPage,
   },
 ];
 

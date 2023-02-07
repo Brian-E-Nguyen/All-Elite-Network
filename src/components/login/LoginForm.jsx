@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -47,6 +47,13 @@ function LoginForm() {
           onChange={inputChangeHandler}
         />
         <button className='w-[70%]'>Login</button>
+        <p className='my-4'>
+          Not part of the All Elite Network?{' '}
+          <Link to='/signup'>Sign up here</Link>
+        </p>
+        <p>
+          <Link to='/'>Go back to home page</Link>
+        </p>
       </form>
     </section>
   );

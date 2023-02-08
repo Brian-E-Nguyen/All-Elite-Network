@@ -8,8 +8,13 @@ export default function SignupForm() {
     retypedPassword: '',
   });
 
+  const [formError, setFormError] = useState('');
+
   function submitHandler(event) {
     event.preventDefault();
+    if (!formData.email || !formData.password || !formData.retypedPassword) {
+      return setFormError('Form is missing information');
+    }
   }
 
   function inputChangeHandler(event) {
@@ -47,6 +52,7 @@ export default function SignupForm() {
         />
 
         <button className='w-[70%] my-4'>Login</button>
+        <p className='text-red-500 font-bold'>{formError}</p>
         <p className='my-4'>
           Already have an account? <Link to='/login'>Login here</Link>
         </p>

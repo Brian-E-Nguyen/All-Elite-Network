@@ -6,7 +6,7 @@ const User = new mongoose.Schema(
     password: { type: String, required: true },
     role: { type: String, required: true },
   },
-  { collection: 'user-data' }
+  { collection: 'users' }
 );
 
 const model = mongoose.model('Users', User);

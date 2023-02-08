@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const User = require('./models/user.model');
 
@@ -12,25 +13,29 @@ app.use(express.json());
 mongoose.connect('mongodb://localhost:27017/all-elite-network');
 
 app.post('/api/register', async (req, res) => {
-  console.log('register called');
-  try {
-    const user = await User.create({
-      email: req.body.email,
-      password: req.body.password,
-      role: 'user',
-    });
-    if (user) {
+  const credentials = req.body;
+  const hash = bcrypt.hashSync(
+    credentials.password,
+    process.env.VITE_BCRYPT_ROUNDS
+  );
+  await User.create({
+    email: req.body.email,
+    password: hash,
+    role: 'user',
+  })
+    .then((result) => {
+      console.log(result);
       res.status(200).json({
         message: 'User registration completed',
-        user,
+        user: result,
       });
-    }
-  } catch (err) {
-    res.status(500).json({
-      message: 'User registration failed',
-      stack: err.stack,
+    })
+    .catch((err) => {
+      res.status(500).json({
+        message: 'User registration failed',
+        stack: err.stack,
+      });
     });
-  }
 });
 
 app.listen(PORT, () => {

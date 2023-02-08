@@ -19,9 +19,11 @@ export default function HomeHeader() {
             Elite Wrestling digital library, including PPV's, Dynamite, Rampage,
             Dark (Elevation), and more
           </p>
-          <button className='w-1/2 sm:py-2 md:py-3 lg:py-5 mb-11'>
-            Sign Up Now
-          </button>
+          <Link to='/signup' className='text-neutral-900 no-underline'>
+            <button className='w-1/2 sm:py-2 md:py-3 lg:py-5 mb-11'>
+              Sign Up Now
+            </button>
+          </Link>
           <p className='font-bold'>
             Already have an account? <Link to='/login'>Login here!</Link>
           </p>

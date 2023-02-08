@@ -12,7 +12,10 @@ export default function SignupForm() {
     event.preventDefault();
   }
 
-  function inputChangeHandler(event) {}
+  function inputChangeHandler(event) {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  }
 
   return (
     <section className='absolute left-0 top-10 right-0 bottom-0 mx-auto bg-neutral-900 w-[33%] h-[600px] rounded-xl bg-opacity-80'>

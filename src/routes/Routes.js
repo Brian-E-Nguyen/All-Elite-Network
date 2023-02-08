@@ -6,6 +6,7 @@ import Rampage_Page from '../views/Rampage_Page';
 import DarkAndDarkElevationPage from '../views/DarkAndDarkElevationPage';
 import LoginPage from '../views/LoginPage';
 import SignupPage from '../views/SignupPage';
+import ErrorPage from '../views/ErrorPage';
 
 const Routes = [
   { title: 'Home', path: '/', exact: true, key: 'Home', component: HomePage },
@@ -50,6 +51,12 @@ const Routes = [
     path: '/signup',
     key: 'signup',
     component: SignupPage,
+  },
+  {
+    title: 'Error',
+    path: '*',
+    key: 'Error',
+    component: ErrorPage,
   },
 ];
 

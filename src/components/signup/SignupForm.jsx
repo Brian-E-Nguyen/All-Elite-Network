@@ -2,6 +2,12 @@ import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
 export default function SignupForm() {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    retypedPassword: '',
+  });
+
   function submitHandler(event) {
     event.preventDefault();
   }
@@ -23,13 +29,21 @@ export default function SignupForm() {
           onChange={inputChangeHandler}
         />
         <input
-          type='Password'
+          type='password'
           placeholder='Password'
           name='password'
-          className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-4'
+          className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
           onChange={inputChangeHandler}
         />
-        <button className='w-[70%]'>Login</button>
+        <input
+          type='password'
+          placeholder='Retype password'
+          name='retypedPassword'
+          className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
+          onChange={inputChangeHandler}
+        />
+
+        <button className='w-[70%] my-4'>Login</button>
         <p className='my-4'>
           Already have an account? <Link to='/login'>Login here</Link>
         </p>

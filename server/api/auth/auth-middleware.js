@@ -10,7 +10,7 @@ function validatePayload(req, res, next) {
   next();
 }
 
-async function checkEmailRegistration(req, res, next) {
+async function checkEmailExists(req, res, next) {
   const { email } = req.body;
   await User.findOne({ email })
     .then((user) => {
@@ -29,4 +29,4 @@ async function checkEmailRegistration(req, res, next) {
     });
 }
 
-module.exports = { validatePayload, checkEmailRegistration };
+module.exports = { validatePayload, checkEmailExists };

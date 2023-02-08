@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const User = require('../../models/user.model');
+const generateToken = require('../../utils/generateToken');
+
 const {
   validatePayload,
   checkEmailExists,
@@ -39,8 +41,11 @@ router.post(
 );
 
 router.post('/login', validatePayload, validateLogin, async (req, res) => {
-  res.status(200).json({
-    message: 'Successfully logged in!',
-  });
+  const user = req.body;
+  console.log(user);
+  // const token = generateToken()
+  // res.status(200).json({
+  //   message: 'Successfully logged in!',
+  // });
 });
 module.exports = router;

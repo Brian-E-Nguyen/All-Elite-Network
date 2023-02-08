@@ -17,6 +17,9 @@ export default function SignupForm() {
     if (formData.password !== formData.retypedPassword) {
       return setFormError('Passwords do not match');
     }
+    if (formData.password.length < 6) {
+      return setFormError('Password must be at least 6 characters');
+    }
   }
 
   function inputChangeHandler(event) {
@@ -40,7 +43,7 @@ export default function SignupForm() {
         />
         <input
           type='password'
-          placeholder='Password'
+          placeholder='Password (6 characters or more)'
           name='password'
           className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
           onChange={inputChangeHandler}

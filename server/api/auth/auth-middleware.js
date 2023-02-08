@@ -29,4 +29,15 @@ async function checkEmailExists(req, res, next) {
     });
 }
 
-module.exports = { validatePayload, checkEmailExists };
+async function validateLogin(req, res, next) {
+  const { email, password } = req.body;
+  User.findOne({ email }).then((user) => {
+    if (!user) {
+      return res.status(400).json({
+        message: 'Email or password is incorrect',
+      });
+    }
+  });
+}
+
+module.exports = { validatePayload, validateLogin, checkEmailExists };

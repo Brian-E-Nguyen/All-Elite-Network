@@ -1,7 +1,11 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const User = require('../../models/user.model');
-const { validatePayload, checkEmailExists } = require('./auth-middleware');
+const {
+  validatePayload,
+  checkEmailExists,
+  validateLogin,
+} = require('./auth-middleware');
 
 router.post(
   '/register',
@@ -34,5 +38,5 @@ router.post(
   }
 );
 
-router.post('/login', validatePayload, async (req, res) => {});
+router.post('/login', validatePayload, validateLogin, async (req, res) => {});
 module.exports = router;

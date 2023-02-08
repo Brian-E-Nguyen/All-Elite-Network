@@ -6,6 +6,7 @@ const authRouter = require('./auth/auth-router');
 
 server.use(cors());
 server.use(express.json());
+server.use(express.session());
 
 server.use('/api/auth', authRouter);
 

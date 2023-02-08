@@ -7,13 +7,15 @@ export default function SignupForm() {
     password: '',
     retypedPassword: '',
   });
-
   const [formError, setFormError] = useState('');
 
   function submitHandler(event) {
     event.preventDefault();
     if (!formData.email || !formData.password || !formData.retypedPassword) {
       return setFormError('Form is missing information');
+    }
+    if (formData.password !== formData.retypedPassword) {
+      return setFormError('Passwords do not match');
     }
   }
 

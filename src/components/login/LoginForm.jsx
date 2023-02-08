@@ -3,12 +3,13 @@ import { useHistory, Link } from 'react-router-dom';
 
 function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formError, setFormError] = useState('');
   const history = useHistory();
 
   function submitHandler(event) {
     event.preventDefault();
     if (!formData.email || !formData.password) {
-      return console.log('missing data');
+      setFormError('Please fill out all information');
     }
 
     if (
@@ -47,6 +48,7 @@ function LoginForm() {
           onChange={inputChangeHandler}
         />
         <button className='w-[70%]'>Login</button>
+        <p className='text-red-500 font-bold'>{formError}</p>
         <p className='my-4'>
           Not part of the All Elite Network?{' '}
           <Link to='/signup'>Sign up here</Link>

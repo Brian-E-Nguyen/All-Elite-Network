@@ -38,5 +38,9 @@ router.post(
   }
 );
 
-router.post('/login', validatePayload, validateLogin, async (req, res) => {});
+router.post('/login', validatePayload, validateLogin, async (req, res) => {
+  res.status(200).json({
+    message: 'Successfully logged in!',
+  });
+});
 module.exports = router;

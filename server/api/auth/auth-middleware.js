@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const User = require('../../models/user.model');
 
 function validatePayload(req, res, next) {
@@ -32,11 +33,12 @@ async function checkEmailExists(req, res, next) {
 async function validateLogin(req, res, next) {
   const { email, password } = req.body;
   User.findOne({ email }).then((user) => {
-    if (!user) {
+    if (!user || !bcrypt.compareSync(password, user.password)) {
       return res.status(400).json({
         message: 'Email or password is incorrect',
       });
     }
+    next();
   });
 }
 

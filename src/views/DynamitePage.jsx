@@ -3,7 +3,7 @@ import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
 import { dynamite } from '../data/MediaListData';
 
-function DynamiteView() {
+function DynamitePage() {
   const jumboImg = dynamite[0].imgSrc;
   const jumboTitle = dynamite[0].title;
   const jumboDescription = dynamite[0].description;
@@ -29,4 +29,4 @@ function DynamiteView() {
   );
 }
 
-export default DynamiteView;
+export default DynamitePage;

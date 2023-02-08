@@ -3,7 +3,7 @@ import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
 import { rampage } from '../data/MediaListData';
 
-function RampagePage() {
+function Rampage_Page() {
   const jumboImg = rampage[0].imgSrc;
   const jumboTitle = rampage[0].title;
   const jumboDescription = rampage[0].description;
@@ -26,4 +26,4 @@ function RampagePage() {
   );
 }
 
-export default RampagePage;
+export default Rampage_Page;

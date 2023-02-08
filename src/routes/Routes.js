@@ -1,11 +1,11 @@
-import HomePage from '../pages/HomePage';
-import FeaturedPage from '../pages/FeaturedPage';
-import DynamitePage from '../pages/DynamitePage';
-import PPVPage from '../pages/PPVPage';
-import RampagePage from '../pages/RampagePage';
-import DarkAndDarkElevationPage from '../pages/DarkAndDarkElevationPage';
-import LoginPage from '../pages/LoginPage';
-import SignupPage from '../pages/SignupPage';
+import HomePage from '../views/HomePage';
+import FeaturedPage from '../views/FeaturedPage';
+import DynamitePage from '../views/DynamitePage';
+import PPVPage from '../views/PPVPage';
+import Rampage_Page from '../views/Rampage_Page';
+import DarkAndDarkElevationPage from '../views/DarkAndDarkElevationPage';
+import LoginPage from '../views/LoginPage';
+import SignupPage from '../views/SignupPage';
 
 const Routes = [
   { title: 'Home', path: '/', exact: true, key: 'Home', component: HomePage },
@@ -31,7 +31,7 @@ const Routes = [
     title: 'Rampage',
     path: '/rampage',
     key: 'Rampage',
-    component: RampagePage,
+    component: Rampage_Page,
   },
   {
     title: 'Dark and Dark Elevation',

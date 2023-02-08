@@ -39,7 +39,7 @@ All rights to the images and media in this app go to their respective owners
 ** Tech Stack
 + React.js
 + React Router
-+ Tailwind
++ Tailwind (replaced Sass)
 
 ** Future Plans
 + Signup / Login module

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import axios from 'axios';
 
 function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -11,14 +12,15 @@ function LoginForm() {
     if (!formData.email || !formData.password) {
       setFormError('Please fill out all information');
     }
-
-    if (
-      formData.email === import.meta.env.VITE_ADMIN_USERNAME &&
-      formData.password === import.meta.env.VITE_ADMIN_PASSWORD
-    ) {
-      return history.push('/featured');
-    }
-    return history.push('/featured');
+    axios
+      .post('http://localhost:1337/api/auth/login', formData)
+      .then(() => {
+        history.push('/featured');
+      })
+      .catch((err) => {
+        const errorMessage = err.response.data.message;
+        setFormError(errorMessage);
+      });
   }
 
   function inputChangeHandler(event) {
@@ -48,7 +50,7 @@ function LoginForm() {
           onChange={inputChangeHandler}
         />
         <button className='w-[70%]'>Login</button>
-        <p className='text-red-500 font-bold'>{formError}</p>
+        <p className='text-red-500 font-bold mt-4'>{formError}</p>
         <p className='my-4'>
           Not part of the All Elite Network?{' '}
           <Link to='/signup'>Sign up here</Link>

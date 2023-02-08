@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function SignupForm() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function SignupForm() {
     if (formData.password.length < 6) {
       return setFormError('Password must be at least 6 characters');
     }
+    axios.post('http://localhost:1337/api/register', formData);
   }
 
   function inputChangeHandler(event) {

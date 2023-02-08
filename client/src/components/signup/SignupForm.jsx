@@ -21,7 +21,15 @@ export default function SignupForm() {
     if (formData.password.length < 6) {
       return setFormError('Password must be at least 6 characters');
     }
-    axios.post('http://localhost:1337/api/register', formData);
+    axios
+      .post('http://localhost:1337/api/auth/register', formData)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        const errorMessage = err.response.data.message;
+        setFormError(errorMessage);
+      });
   }
 
   function inputChangeHandler(event) {

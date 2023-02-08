@@ -9,6 +9,7 @@ export default function SignupForm() {
     retypedPassword: '',
   });
   const [formError, setFormError] = useState('');
+  const history = useHistory();
 
   function submitHandler(event) {
     event.preventDefault();
@@ -23,8 +24,8 @@ export default function SignupForm() {
     }
     axios
       .post('http://localhost:1337/api/auth/register', formData)
-      .then((res) => {
-        console.log(res.data);
+      .then(() => {
+        history.push('/featured');
       })
       .catch((err) => {
         const errorMessage = err.response.data.message;

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
@@ -9,9 +10,18 @@ function DynamitePage() {
   const history = useHistory();
   useEffect(() => {
     const token = localStorage.getItem('token');
-    if (!token) {
-      history.push('/login');
-    }
+    axios
+      .get('http://localhost:1337/api/auth/restricted', {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then(() => {
+        // TODO: set success message
+      })
+      .catch((err) => {
+        history.push('/login');
+      });
   }, []);
 
   const jumboImg = dynamite[0].imgSrc;

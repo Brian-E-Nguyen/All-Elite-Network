@@ -4,14 +4,25 @@ import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
 import { dark, darkElevation } from '../data/MediaListData';
+import axios from 'axios';
 
 function DarkAndDarkElevationPage() {
   const history = useHistory();
+
   useEffect(() => {
     const token = localStorage.getItem('token');
-    if (!token) {
-      history.push('/login');
-    }
+    axios
+      .get('http://localhost:1337/api/auth/restricted', {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then(() => {
+        // TODO: set success message
+      })
+      .catch((err) => {
+        history.push('/login');
+      });
   }, []);
 
   const jumboImg = dark[0].imgSrc;

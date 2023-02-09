@@ -43,7 +43,6 @@ router.post(
 
 router.post('/login', validatePayload, validateLogin, async (req, res) => {
   try {
-    console.log(req.user);
     const token = generateToken(req.user);
     req.headers.authorization = token;
     req.session.user = req.user;
@@ -61,7 +60,7 @@ router.post('/login', validatePayload, validateLogin, async (req, res) => {
 
 router.get('/restricted', (req, res) => {
   const token = req.headers.authorization;
-  console.log(req.headers);
+  console.log(token);
   if (!token) {
     return res.status(401).json({ message: 'no token' });
   }
@@ -70,6 +69,7 @@ router.get('/restricted', (req, res) => {
     if (err) {
       return res.status(401).json({ message: 'bad token' });
     }
+    return res.status(200).json({ message: 'OK' });
   });
 });
 

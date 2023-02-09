@@ -14,7 +14,8 @@ function LoginForm() {
     }
     axios
       .post('http://localhost:1337/api/auth/login', formData)
-      .then(() => {
+      .then((res) => {
+        localStorage.setItem('token', res.data.token);
         history.push('/featured');
       })
       .catch((err) => {

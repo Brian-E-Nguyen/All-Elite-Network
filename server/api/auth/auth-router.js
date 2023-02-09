@@ -50,7 +50,7 @@ router.post('/login', validatePayload, validateLogin, async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({
-      message: 'Something went wrong with user registration',
+      message: 'Something went wrong with user login. Please try again later',
       stack: err.stack,
     });
   }

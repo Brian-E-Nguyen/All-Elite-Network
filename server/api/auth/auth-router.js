@@ -7,6 +7,7 @@ const {
   validatePayload,
   checkEmailExists,
   validateLogin,
+  restricted,
 } = require('./auth-middleware');
 
 router.post(
@@ -42,6 +43,7 @@ router.post(
 
 router.post('/login', validatePayload, validateLogin, async (req, res) => {
   try {
+    console.log(req.user);
     const token = generateToken(req.user);
     req.headers.authorization = token;
     res.status(200).json({
@@ -55,4 +57,9 @@ router.post('/login', validatePayload, validateLogin, async (req, res) => {
     });
   }
 });
+
+router.get('/restricted', restricted, (req, res) => {
+  console.log('success');
+});
+
 module.exports = router;

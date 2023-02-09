@@ -8,7 +8,7 @@ dotenv.config({ path: '../.env' });
 
 const sessionConfig = {
   name: 'cookie',
-  secret: process.env.VITE_APP_SESSION_SECRET || 'gigatummy',
+  secret: process.env.VITE_APP_SESSION_SECRET,
   cookie: {
     maxAge: 1000 * 30, // valid for 30 seconds
     secure: false,

@@ -5,6 +5,7 @@ import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
 import { rampage } from '../data/MediaListData';
+import AnimatedPage from '../components/animations/AnimatedPage';
 
 function Rampage_Page() {
   const history = useHistory();
@@ -30,18 +31,20 @@ function Rampage_Page() {
   return (
     <>
       <Navbar />
-      <Jumbotron
-        src={jumboImg}
-        title={jumboTitle}
-        description={jumboDescription}
-      />
-      <section className='container mx-auto'>
-        <h1 className='text-center'>AEW Rampage</h1>
-        <p className='text-xl'>
-          Cap your week off with some exciting wrestling every Friday night.
-        </p>
-      </section>
-      <MediaCardList shows={rampage} showName='2022' />
+      <AnimatedPage>
+        <Jumbotron
+          src={jumboImg}
+          title={jumboTitle}
+          description={jumboDescription}
+        />
+        <section className='container mx-auto'>
+          <h1 className='text-center'>AEW Rampage</h1>
+          <p className='text-xl'>
+            Cap your week off with some exciting wrestling every Friday night.
+          </p>
+        </section>
+        <MediaCardList shows={rampage} showName='2022' />
+      </AnimatedPage>
     </>
   );
 }

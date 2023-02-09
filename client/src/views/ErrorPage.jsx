@@ -1,8 +1,9 @@
 import { homeFeaturedData } from '../data/FeaturedData';
+import AnimatedPage from '../components/animations/AnimatedPage';
 
 export default function ErrorPage() {
   return (
-    <>
+    <AnimatedPage>
       <div
         className='relative bg-cover bg-center h-screen brightness-50'
         style={{ backgroundImage: `url(${homeFeaturedData.src})` }}
@@ -19,6 +20,6 @@ export default function ErrorPage() {
           </a>
         </p>
       </section>
-    </>
+    </AnimatedPage>
   );
 }

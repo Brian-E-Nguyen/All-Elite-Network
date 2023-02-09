@@ -44,22 +44,7 @@ async function validateLogin(req, res, next) {
   });
 }
 
-function restricted(req, res, next) {
-  const token = req.headers.authorization;
-  if (!token) {
-    return res.status(401).json({ message: 'no token' });
-  }
-
-  jwt.verify(token, process.env.VITE_APP_JWT_SECRET, (err, decoded) => {
-    if (err) {
-      return res.status(401).json({ message: 'bad token' });
-    }
-    next();
-  });
-}
-
 module.exports = {
-  restricted,
   validatePayload,
   validateLogin,
   checkEmailExists,

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
@@ -10,6 +12,14 @@ import {
 } from '../data/MediaListData';
 
 function FeaturedPage() {
+  const history = useHistory();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      history.push('/login');
+    }
+  }, []);
+
   const jumboImg = payperview[0].imgSrc;
   const jumboTitle = payperview[0].title;
   const jumboDescription = payperview[0].description;

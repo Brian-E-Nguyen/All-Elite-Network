@@ -1,9 +1,19 @@
+import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import Jumbotron from '../components/ui/jumbotron/Jumbotron';
 import MediaCardList from '../components/media/MediaCardList';
 import Navbar from '../components/ui/navbar/Navbar';
 import { dark, darkElevation } from '../data/MediaListData';
 
 function DarkAndDarkElevationPage() {
+  const history = useHistory();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      history.push('/login');
+    }
+  }, []);
+
   const jumboImg = dark[0].imgSrc;
   const jumboTitle = dark[0].title;
   const jumboDescription = dark[0].description;

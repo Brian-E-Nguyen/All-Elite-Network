@@ -38,6 +38,7 @@ async function validateLogin(req, res, next) {
         message: 'Email or password is incorrect',
       });
     }
+    req.user = user;
     next();
   });
 }

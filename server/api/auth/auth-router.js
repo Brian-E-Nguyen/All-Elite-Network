@@ -41,11 +41,11 @@ router.post(
 );
 
 router.post('/login', validatePayload, validateLogin, async (req, res) => {
-  const user = req.body;
-  console.log(user);
-  // const token = generateToken()
-  // res.status(200).json({
-  //   message: 'Successfully logged in!',
-  // });
+  console.log(req.user);
+  const token = generateToken(req.user);
+  res.status(200).json({
+    message: 'Successfully logged in!',
+    token,
+  });
 });
 module.exports = router;

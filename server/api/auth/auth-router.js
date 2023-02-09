@@ -41,11 +41,17 @@ router.post(
 );
 
 router.post('/login', validatePayload, validateLogin, async (req, res) => {
-  console.log(req.user);
-  const token = generateToken(req.user);
-  res.status(200).json({
-    message: 'Successfully logged in!',
-    token,
-  });
+  try {
+    const token = generateToken(req.user);
+    res.status(200).json({
+      message: 'Successfully logged in!',
+      token,
+    });
+  } catch (err) {
+    res.status(500).json({
+      message: 'Something went wrong with user registration',
+      stack: err.stack,
+    });
+  }
 });
 module.exports = router;

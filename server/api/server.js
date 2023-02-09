@@ -2,13 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const server = express();
 const session = require('express-session');
-require('dotenv').config();
 const authRouter = require('./auth/auth-router');
+const dotenv = require('dotenv');
+dotenv.config({ path: '../.env' });
 
-console.log(process.env.SESSION_SECRET);
 const sessionConfig = {
   name: 'cookie',
-  secret: process.env.SESSION_SECRET || 'gigatummy',
+  secret: process.env.VITE_APP_SESSION_SECRET || 'gigatummy',
   cookie: {
     maxAge: 1000 * 30, // valid for 30 seconds
     secure: false,

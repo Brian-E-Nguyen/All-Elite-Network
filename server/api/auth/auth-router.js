@@ -43,6 +43,7 @@ router.post(
 router.post('/login', validatePayload, validateLogin, async (req, res) => {
   try {
     const token = generateToken(req.user);
+    req.headers.authorization = token;
     res.status(200).json({
       message: 'Successfully logged in!',
       token,

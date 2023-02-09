@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const User = require('../../models/user.model');
+const jwt = require('jsonwebtoken');
 
 function validatePayload(req, res, next) {
   const { email, password } = req.body;
@@ -43,4 +44,23 @@ async function validateLogin(req, res, next) {
   });
 }
 
-module.exports = { validatePayload, validateLogin, checkEmailExists };
+function restricted(req, res, next) {
+  const token = req.headers.authorization;
+  if (!token) {
+    return res.status(401).json({ message: 'no token' });
+  }
+
+  jwt.verify(token, process.env.VITE_APP_JWT_SECRET, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ message: 'bad token' });
+    }
+    next();
+  });
+}
+
+module.exports = {
+  restricted,
+  validatePayload,
+  validateLogin,
+  checkEmailExists,
+};

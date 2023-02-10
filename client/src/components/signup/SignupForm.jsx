@@ -7,6 +7,7 @@ export default function SignupForm() {
     email: '',
     password: '',
     retypedPassword: '',
+    plan: 'standard',
   });
   const [formError, setFormError] = useState('');
   const history = useHistory();
@@ -34,7 +35,7 @@ export default function SignupForm() {
   }
 
   function inputChangeHandler(event) {
-    const { name, value } = event.target;
+    const { name, value, type } = event.target;
     setFormData({ ...formData, [name]: value });
   }
 
@@ -66,7 +67,37 @@ export default function SignupForm() {
           className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
           onChange={inputChangeHandler}
         />
-
+        <div class='flex items-center mb-4'>
+          <input
+            id='default-radio-1'
+            type='radio'
+            value='standard'
+            name='plan'
+            class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+          />
+          <label
+            for='default-radio-1'
+            class='ml-2 text-lg font-medium text-gray-900 dark:text-gray-300'
+          >
+            Standard Plan
+          </label>
+        </div>
+        <div class='flex items-center'>
+          <input
+            checked
+            id='default-radio-2'
+            type='radio'
+            value='all-elite'
+            name='plan'
+            class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+          />
+          <label
+            for='default-radio-2'
+            class='ml-2 text-lg font-medium text-gray-900 dark:text-gray-300'
+          >
+            All Elite Plan
+          </label>
+        </div>
         <button className='w-[70%] my-4'>Login</button>
         <p className='text-red-500 font-bold'>{formError}</p>
         <p className='my-4'>

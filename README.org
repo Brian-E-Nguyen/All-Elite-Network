@@ -40,11 +40,12 @@ All rights to the images and media in this app go to their respective owners
 + React.js
 + React Router
 + Tailwind (replaced Sass)
++ MongoDB to store [X] users and [] media data
++ Node
++ Express.js
 
 ** Future Plans
-+ Signup / Login module
 + Search module
-+ MongoDB to store media data and users
 
 ** Images
 [[./readme-img/img1.png]]

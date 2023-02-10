@@ -1,7 +1,28 @@
+import { useEffect } from 'react';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import SignupForm from '../components/signup/SignupForm';
 import { homeFeaturedData } from '../data/FeaturedData';
 import AnimatedPage from '../components/animations/AnimatedPage';
 export default function SignupPage() {
+  const history = useHistory();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+    axios
+      .get('http://localhost:1337/api/auth/restricted', {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then((res) => {
+        if (res.data.token) {
+          history.push('/featured');
+        }
+      });
+  }, []);
+
   return (
     <AnimatedPage>
       <div

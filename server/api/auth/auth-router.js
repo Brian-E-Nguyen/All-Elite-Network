@@ -17,7 +17,15 @@ router.post(
   async (req, res) => {
     // Password hash
     const user = req.body;
-    const hash = bcrypt.hashSync(user.password, process.env.VITE_BCRYPT_ROUNDS);
+    // For some reason the VITE_BCRYPT_ROUNDS produced
+    // an 'invalid salt version', but when I insert a
+    // hardcoded number, the algorithm does work
+
+    // const hash = bcrypt.hashSync(
+    //   user.password,
+    //   process.env.VITE_BCRYPT_ROUNDS || 8
+    // );
+    const hash = bcrypt.hashSync(user.password, 7);
     user.password = hash;
 
     // Attempt user creation
@@ -25,6 +33,7 @@ router.post(
       email: user.email,
       password: user.password,
       role: 'user',
+      plan: user.plan,
     })
       .then((result) => {
         return res.status(200).json({

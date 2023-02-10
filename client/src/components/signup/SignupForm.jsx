@@ -101,7 +101,7 @@ export default function SignupForm() {
             All Elite Plan
           </label>
         </div>
-        <button className='w-[70%] my-4'>Login</button>
+        <button className='w-[70%] my-4'>Sign Up</button>
         <p className='text-red-500 font-bold'>{formError}</p>
         <p className='my-4'>
           Already have an account? <Link to='/login'>Login here</Link>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function HomeHeader() {
   return (
-    <section className='relative text-center sm:h-[40vh] md:h-[55vh] lg:h-[80vh]'>
+    <section className='relative text-center sm:h-[40vh] md:h-[55vh] lg:h-[80vh] xs:mt-24'>
       <img
         src={homeFeaturedData.src}
         alt={homeFeaturedData.alt}

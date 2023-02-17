@@ -11,10 +11,10 @@ export default function HomeHeader() {
       />
       <div className='absolute inset-0 flex items-center justify-center'>
         <div>
-          <h1 className='xs:text-sm sm:text-sm md:text-2xl lg:text-4xl'>
+          <h1 className='xs:text-2xl sm:text-xl md:text-2xl lg:text-4xl mb-4'>
             All Elite Wrestling: Now Available on Demand
           </h1>
-          <p className='text-lg xs:text-sm font-bold'>
+          <p className='text-lg hidden lg:block font-bold'>
             Welcome to the All-Elite Network. Get access to the extensive All
             Elite Wrestling digital library, including PPV's, Dynamite, Rampage,
             Dark (Elevation), and more

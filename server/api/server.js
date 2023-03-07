@@ -31,6 +31,8 @@ server.use(
     ],
   })
 );
+
+server.options('*', cors());
 server.use(helmet());
 server.use(express.json());
 

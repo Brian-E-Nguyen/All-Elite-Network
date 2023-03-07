@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 
 function validatePayload(req, res, next) {
   const { email, password } = req.body;
+  console.log(email);
+
   if (!email || !password) {
     return res.status(404).json({
       message: 'email and password required',

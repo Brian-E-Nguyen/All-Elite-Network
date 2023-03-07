@@ -20,7 +20,11 @@ const sessionConfig = {
 };
 
 server.use(session(sessionConfig));
-server.use(cors());
+server.use(
+  cors({
+    origin: process.env.VITE_APP_BACKEND_API,
+  })
+);
 server.use(helmet());
 server.use(express.json());
 

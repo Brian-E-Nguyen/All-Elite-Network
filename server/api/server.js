@@ -23,6 +23,12 @@ server.use(session(sessionConfig));
 server.use(
   cors({
     origin: process.env.VITE_APP_BACKEND_API,
+    methods: ['GET', 'POST'],
+    allowedHeaders: [
+      'Content-Type',
+      'Authorization',
+      'Access-Control-Allow-Origin',
+    ],
   })
 );
 server.use(helmet());

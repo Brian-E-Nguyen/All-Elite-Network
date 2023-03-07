@@ -24,7 +24,10 @@ export default function SignupForm() {
       return setFormError('Password must be at least 6 characters');
     }
     axios
-      .post('http://localhost:1337/api/auth/register', formData)
+      .post(
+        `${import.meta.env.VITE_APP_BACKEND_API}/api/auth/register`,
+        formData
+      )
       .then(() => {
         history.push('/featured');
       })

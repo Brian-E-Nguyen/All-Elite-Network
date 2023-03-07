@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config({ path: '../.env' });
 
-mongoose.connect('mongodb://localhost:27017/all-elite-network');
+const mongoUrl = `mongodb+srv://Buraiyen:${process.env.VITE_APP_MONGO_PASSWORD}@all-elite-network.fagkgiv.mongodb.net/?retryWrites=true&w=majority`;
+
+mongoose.connect(mongoUrl);
 
 const PORT = process.env.PORT || 1337;
 

@@ -14,6 +14,7 @@ function validatePayload(req, res, next) {
 
 async function checkEmailExists(req, res, next) {
   const { email } = req.body;
+  console.log(email);
   await User.findOne({ email })
     .then((user) => {
       if (user) {

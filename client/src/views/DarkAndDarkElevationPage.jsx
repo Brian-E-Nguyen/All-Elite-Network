@@ -13,7 +13,7 @@ function DarkAndDarkElevationPage() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     axios
-      .get('http://localhost:1337/api/auth/restricted', {
+      .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/restricted`, {
         headers: {
           Authorization: token,
         },

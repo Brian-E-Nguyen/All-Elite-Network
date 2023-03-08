@@ -1,11 +1,28 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 import NavbarMobileButton from './NavbarMobileButton';
 import navLinks from './navLinks';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const history = useHistory();
+
+  function logoutHandler(event) {
+    event.preventDefault();
+
+    axios
+      .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/register`)
+      // .get(`http://localhost:1337/api/auth/logout`)
+      .then((res) => {
+        localStorage.removeItem('token');
+        history.push('/');
+      })
+      .catch((err) => {
+        // TODO: handle error
+      });
+  }
 
   return (
     <nav className='flex items-center justify-between bg-neutral-800 py-2'>
@@ -31,6 +48,11 @@ function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li className='inline mx-4 text-xl font-bold' onClick={logoutHandler}>
+            <a className='text-neutral-300 text-decoration-none no-underline uppercase hover:cursor-pointer'>
+              Logout
+            </a>
+          </li>
         </ul>
       </div>
       <div className='mr-12 absolute right-0 flex md:hidden'>
@@ -44,6 +66,7 @@ function Navbar() {
                 {link}
               </li>
             ))}
+            <li className='mx-4 w-screen text-lg font-bold'>Logout</li>
           </ul>
         )}
       </div>

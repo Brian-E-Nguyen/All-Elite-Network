@@ -67,6 +67,20 @@ router.post('/login', validatePayload, validateLogin, async (req, res) => {
   }
 });
 
+router.get('/logout', (req, res) => {
+  console.log(req.session);
+  if (!req.session) {
+    return res.status(401).json({ message: 'You are not logged in' });
+  }
+  req.session.destroy((err) => {
+    if (err) {
+      res.status(500).json({ message: 'Error in logging out' });
+    } else {
+      res.status(200).json({ message: 'Goodbye!' });
+    }
+  });
+});
+
 router.get('/restricted', (req, res) => {
   const token = req.headers.authorization;
   if (!token) {

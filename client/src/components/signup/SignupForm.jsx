@@ -25,14 +25,16 @@ export default function SignupForm() {
     }
     axios
       .post(
-        `${import.meta.env.VITE_APP_BACKEND_API}/api/auth/register`,
+        // `${import.meta.env.VITE_APP_BACKEND_API}/api/auth/register`,
+        `http://localhost:1337/api/auth/register`,
         formData
       )
       .then(() => {
         history.push('/featured');
       })
       .catch((err) => {
-        const errorMessage = err.response.data.message;
+        const errorMessage =
+          err.response.data.message || 'An unexpected error happend';
         setFormError(errorMessage);
       });
   }

@@ -7,6 +7,20 @@ const helmet = require('helmet');
 const dotenv = require('dotenv');
 dotenv.config({ path: '../.env' });
 
+server.use(cors());
+server.use(
+  cors({
+    origin: [`${process.env.VITE_APP_BACKEND_API}`, 'http://localhost:1337'],
+    methods: ['GET', 'POST'],
+    allowedHeaders: [
+      'Content-Type',
+      'Authorization',
+      'Access-Control-Allow-Origin',
+    ],
+  })
+);
+
+// server.options('*', cors());
 const sessionConfig = {
   name: 'cookie',
   secret: process.env.VITE_APP_SESSION_SECRET,
@@ -20,19 +34,7 @@ const sessionConfig = {
 };
 
 server.use(session(sessionConfig));
-server.use(
-  cors({
-    origin: process.env.VITE_APP_BACKEND_API,
-    methods: ['GET', 'POST'],
-    allowedHeaders: [
-      'Content-Type',
-      'Authorization',
-      'Access-Control-Allow-Origin',
-    ],
-  })
-);
 
-server.options('*', cors());
 server.use(helmet());
 server.use(express.json());
 

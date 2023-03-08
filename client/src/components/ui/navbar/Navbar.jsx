@@ -13,7 +13,7 @@ function Navbar() {
     event.preventDefault();
 
     axios
-      .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/register`)
+      .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/logout`)
       // .get(`http://localhost:1337/api/auth/logout`)
       .then((res) => {
         localStorage.removeItem('token');

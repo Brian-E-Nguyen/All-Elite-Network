@@ -6,6 +6,7 @@ import Rampage_Page from '../views/Rampage_Page';
 import DarkAndDarkElevationPage from '../views/DarkAndDarkElevationPage';
 import LoginPage from '../views/LoginPage';
 import SignupPage from '../views/SignupPage';
+import SettingsPage from '../views/SettingsPage';
 import ErrorPage from '../views/ErrorPage';
 
 const Routes = [
@@ -52,6 +53,13 @@ const Routes = [
     key: 'signup',
     component: SignupPage,
   },
+  {
+    title: 'Settings',
+    path: '/settings',
+    key: 'settings',
+    component: SettingsPage,
+  },
+
   {
     title: 'Error',
     path: '*',

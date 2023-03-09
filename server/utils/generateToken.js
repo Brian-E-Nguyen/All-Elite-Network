@@ -7,6 +7,7 @@ module.exports = function generateToken(user) {
     subject: user._id,
     email: user.email,
     role: user.role,
+    plan: user.plan,
   };
 
   const secret = process.env.VITE_APP_JWT_SECRET;

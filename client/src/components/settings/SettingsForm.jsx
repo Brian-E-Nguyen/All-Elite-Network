@@ -10,6 +10,17 @@ function SettingsForm() {
 
   function submitHandler(event) {
     event.preventDefault();
+    if (!formData.email || !formData.password || formData.password.length < 6) {
+      return;
+    }
+    axios
+      .put(`http://localhost:1337/api/auth/update`, formData)
+      .then((res) => {
+        console.log('success');
+      })
+      .catch((err) => {
+        console.log('fail');
+      });
   }
 
   function inputChangeHandler(event) {

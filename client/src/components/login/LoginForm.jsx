@@ -11,10 +11,11 @@ function LoginForm() {
     event.preventDefault();
     if (!formData.email || !formData.password) {
       setFormError('Please fill out all information');
+      return;
     }
     axios
-      // .post(`http://localhost:1337/api/auth/login`, formData)
-      .post(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/login`, formData)
+      .post(`http://localhost:1337/api/auth/login`, formData)
+      // .post(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/login`, formData)
       .then((res) => {
         localStorage.setItem('token', res.data.token);
         history.push('/featured');

@@ -67,6 +67,31 @@ router.post('/login', validatePayload, validateLogin, async (req, res) => {
   }
 });
 
+router.put('/update', async (req, res) => {
+  const user = req.body;
+  const hash = bcrypt.hashSync(user.password, 7);
+  user.password = hash;
+
+  await User.updateOne({
+    email: user.email,
+    password: user.password,
+    role: 'user',
+    plan: user.plan,
+  })
+    .then((result) => {
+      return res.status(200).json({
+        message: 'User updated successfully',
+        user: result,
+      });
+    })
+    .catch((err) => {
+      return res.status(500).json({
+        message: 'User failed to update',
+        stack: err.stack,
+      });
+    });
+});
+
 router.get('/logout', (req, res) => {
   console.log(req.session);
   if (!req.session) {

@@ -1,0 +1,12 @@
+#+title: Server
+
+* TABLE OF CONTENTS :TOC:
+- [[#about-this-directory][About this Directory]]
+- [[#directories][Directories]]
+  - [[#api][=/api=]]
+
+* About this Directory
+This directory contains files necessary for this application's back-end. Built with Express.js for web API's and MongoDB for user storage
+
+* Directories
+** =/api=

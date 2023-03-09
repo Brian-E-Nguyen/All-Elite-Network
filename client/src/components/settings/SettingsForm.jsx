@@ -1,8 +1,20 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function SettingsForm() {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    plan: 'standard',
+  });
+
   function submitHandler(event) {
     event.preventDefault();
+  }
+
+  function inputChangeHandler(event) {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   }
 
   return (
@@ -13,6 +25,7 @@ function SettingsForm() {
         name='email'
         placeholder='email@example.com'
         className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
+        onChange={inputChangeHandler}
       />
 
       <label htmlFor='password'>Password</label>
@@ -21,6 +34,7 @@ function SettingsForm() {
         name='password'
         placeholder='Password (must be at least 6 characters)'
         className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-2'
+        onChange={inputChangeHandler}
       />
       <label htmlFor='plans'>Plans</label>
       <div className='flex items-center mb-4'>
@@ -30,6 +44,8 @@ function SettingsForm() {
           value='standard'
           name='plan'
           className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+          checked={formData.plan === 'standard'}
+          onChange={inputChangeHandler}
         />
         <label
           htmlFor='default-radio-1'
@@ -45,6 +61,8 @@ function SettingsForm() {
           value='all-elite'
           name='plan'
           className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+          checked={formData.plan === 'all-elite'}
+          onChange={inputChangeHandler}
         />
         <label
           htmlFor='default-radio-2'

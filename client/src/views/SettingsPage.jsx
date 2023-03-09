@@ -3,17 +3,20 @@ import AnimatedPage from '../components/animations/AnimatedPage';
 import SettingsForm from '../components/settings/SettingsForm';
 import { useJwt } from 'react-jwt';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function SettingsPage() {
   const token = localStorage.getItem('token');
   const { decodedToken } = useJwt(token);
+  const history = useHistory();
 
   function deleteHandler(event) {
     const email = decodedToken.email;
     axios
       .delete(`http://localhost:1337/api/auth/${email}`)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        localStorage.removeItem('token');
+        history.push('/');
       })
       .catch((err) => {
         console.log(err);

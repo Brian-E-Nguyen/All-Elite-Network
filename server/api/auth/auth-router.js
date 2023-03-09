@@ -107,7 +107,19 @@ router.get('/logout', (req, res) => {
 
 router.delete('/:email', (req, res) => {
   const email = req.params.email;
-  console.log(email);
+  User.deleteOne({ email })
+    .then((result) => {
+      return res.status(200).json({
+        message: 'User deleted successfully',
+        user: result,
+      });
+    })
+    .catch((err) => {
+      return res.status(500).json({
+        message: 'User failed to delete',
+        stack: err.stack,
+      });
+    });
 });
 
 router.get('/restricted', (req, res) => {

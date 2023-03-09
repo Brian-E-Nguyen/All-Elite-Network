@@ -93,7 +93,6 @@ router.put('/update', async (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-  console.log(req.session);
   if (!req.session) {
     return res.status(401).json({ message: 'You are not logged in' });
   }
@@ -104,6 +103,11 @@ router.get('/logout', (req, res) => {
       res.status(200).json({ message: 'Goodbye!' });
     }
   });
+});
+
+router.delete('/:email', (req, res) => {
+  const email = req.params.email;
+  console.log(email);
 });
 
 router.get('/restricted', (req, res) => {

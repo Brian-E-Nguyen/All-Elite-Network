@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import Cliploader from 'react-spinners/ClipLoader';
 import axios from 'axios';
 
 function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState('');
   const history = useHistory();
 
   function submitHandler(event) {
     event.preventDefault();
+    setIsLoading(true);
     if (!formData.email || !formData.password) {
       setFormError('Please fill out all information');
       return;
@@ -22,6 +25,7 @@ function LoginForm() {
       .catch((err) => {
         const errorMessage = err.response.data.message;
         setFormError(errorMessage);
+        setIsLoading(false);
       });
   }
 
@@ -51,7 +55,11 @@ function LoginForm() {
           className='form-input bg-gray-200 w-[70%] rounded-md p-2 text-neutral-100 block bg-neutral-700 my-4'
           onChange={inputChangeHandler}
         />
-        <button className='w-[70%]'>Login</button>
+        {isLoading ? (
+          <Cliploader color='yellow' size={50} />
+        ) : (
+          <button className='w-[70%]'>Login</button>
+        )}
         <p className='text-red-500 font-bold mt-4'>{formError}</p>
         <p className='my-4'>
           Not part of the All Elite Network?{' '}

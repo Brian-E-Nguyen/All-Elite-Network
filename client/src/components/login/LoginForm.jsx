@@ -14,6 +14,7 @@ function LoginForm() {
     setIsLoading(true);
     if (!formData.email || !formData.password) {
       setFormError('Please fill out all information');
+      setIsLoading(false);
       return;
     }
     axios

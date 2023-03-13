@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import Cliploader from 'react-spinners/ClipLoader';
 import axios from 'axios';
 
 export default function SignupForm() {
@@ -9,20 +10,27 @@ export default function SignupForm() {
     retypedPassword: '',
     plan: 'standard',
   });
+  const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState('');
   const history = useHistory();
 
   function submitHandler(event) {
     event.preventDefault();
+    setIsLoading(true);
     if (!formData.email || !formData.password || !formData.retypedPassword) {
+      setIsLoading(false);
       return setFormError('Form is missing information');
     }
     if (formData.password !== formData.retypedPassword) {
+      setIsLoading(false);
       return setFormError('Passwords do not match');
     }
+
     if (formData.password.length < 6) {
+      setIsLoading(false);
       return setFormError('Password must be at least 6 characters');
     }
+
     axios
       .post(
         `${import.meta.env.VITE_APP_BACKEND_API}/api/auth/register`,
@@ -36,6 +44,8 @@ export default function SignupForm() {
           err.response.data.message || 'An unexpected error happend';
         setFormError(errorMessage);
       });
+
+    setIsLoading(false);
   }
 
   function inputChangeHandler(event) {
@@ -105,7 +115,11 @@ export default function SignupForm() {
             All Elite Plan
           </label>
         </div>
-        <button className='w-[70%] my-4'>Sign Up</button>
+        {isLoading ? (
+          <Cliploader color='yellow' size={50} />
+        ) : (
+          <button className='w-[70%] my-4'>Sign Up</button>
+        )}
         <p className='text-red-500 font-bold'>{formError}</p>
         <p className='my-4'>
           Already have an account? <Link to='/login'>Login here</Link>

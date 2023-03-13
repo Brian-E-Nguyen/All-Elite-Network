@@ -44,7 +44,7 @@ function SettingsPage() {
           <h2 className='my-5'>Update Account</h2>
           <SettingsForm />
           <hr className='my-4' />
-          <button className='bg-red-400' onClick={logoutHandler}>
+          <button className='bg-red-400 mr-4' onClick={logoutHandler}>
             Logout
           </button>
           <button className='bg-red-600' onClick={deleteHandler}>

@@ -5,7 +5,12 @@ const session = require('express-session');
 const authRouter = require('./auth/auth-router');
 const helmet = require('helmet');
 const dotenv = require('dotenv');
-dotenv.config({ path: '../.env' });
+
+if (process.env.NODE_ENV === 'production') {
+  dotenv.config({ path: '../.env.production.local' });
+} else {
+  dotenv.config({ path: '../.env.development.local' });
+}
 
 server.use(cors());
 server.use(

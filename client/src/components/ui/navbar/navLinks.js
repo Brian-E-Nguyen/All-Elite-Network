@@ -19,4 +19,8 @@ export default [
     title: 'Dark / Dark Elevation',
     path: '/dark',
   },
+  {
+    title: 'Settings',
+    path: '/settings',
+  },
 ];

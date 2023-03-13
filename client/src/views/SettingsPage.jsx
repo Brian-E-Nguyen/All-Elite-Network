@@ -10,7 +10,7 @@ function SettingsPage() {
   const { decodedToken } = useJwt(token);
   const history = useHistory();
 
-  function deleteHandler(event) {
+  function deleteHandler() {
     const email = decodedToken.email;
     axios
       .delete(`http://localhost:1337/api/auth/${email}`)
@@ -22,6 +22,19 @@ function SettingsPage() {
         console.log(err);
       });
   }
+
+  function logoutHandler() {
+    axios
+      // .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/logout`)
+      .get(`http://localhost:1337/api/auth/logout`)
+      .then((res) => {
+        localStorage.removeItem('token');
+        history.push('/');
+      })
+      .catch((err) => {
+        // TODO: handle error
+      });
+  }
   return (
     <>
       <Navbar />
@@ -30,8 +43,10 @@ function SettingsPage() {
           <h1>Settings</h1>
           <h2 className='my-5'>Update Account</h2>
           <SettingsForm />
-          <hr />
-          <h2 className='my-5'>Danger Zone</h2>
+          <hr className='my-4' />
+          <button className='bg-red-400' onClick={logoutHandler}>
+            Logout
+          </button>
           <button className='bg-red-600' onClick={deleteHandler}>
             Delete Account
           </button>

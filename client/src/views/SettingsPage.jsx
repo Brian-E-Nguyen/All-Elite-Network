@@ -25,8 +25,7 @@ function SettingsPage() {
 
   function logoutHandler() {
     axios
-      // .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/logout`)
-      .get(`http://localhost:1337/api/auth/logout`)
+      .get(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/logout`)
       .then((res) => {
         localStorage.removeItem('token');
         history.push('/');

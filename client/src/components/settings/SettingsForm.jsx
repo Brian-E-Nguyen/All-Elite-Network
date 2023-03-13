@@ -11,10 +11,12 @@ function SettingsForm() {
   function submitHandler(event) {
     event.preventDefault();
     if (!formData.email || !formData.password || formData.password.length < 6) {
+      // TODO: have an error message
       return;
     }
+
     axios
-      .put(`http://localhost:1337/api/auth/update`, formData)
+      .put(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/update`, formData)
       .then((res) => {
         console.log('success');
       })

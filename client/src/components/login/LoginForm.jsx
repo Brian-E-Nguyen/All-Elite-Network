@@ -12,11 +12,19 @@ function LoginForm() {
   function submitHandler(event) {
     event.preventDefault();
     setIsLoading(true);
+    setFormError('');
+
     if (!formData.email || !formData.password) {
       setFormError('Please fill out all information');
       setIsLoading(false);
       return;
     }
+    setTimeout(() => {
+      setFormError(
+        'If this is taking a while, please wait a moment. The backend might be booting up'
+      );
+    }, 3000);
+
     axios
       .post(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/login`, formData)
       .then((res) => {

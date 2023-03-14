@@ -17,6 +17,8 @@ export default function SignupForm() {
   function submitHandler(event) {
     event.preventDefault();
     setIsLoading(true);
+    setFormError('');
+
     if (!formData.email || !formData.password || !formData.retypedPassword) {
       setIsLoading(false);
       return setFormError('Form is missing information');
@@ -30,6 +32,11 @@ export default function SignupForm() {
       setIsLoading(false);
       return setFormError('Password must be at least 6 characters');
     }
+    setTimeout(() => {
+      setFormError(
+        'If this is taking a while, please wait a moment. The backend might be booting up'
+      );
+    }, 3000);
 
     axios
       .post(
@@ -45,7 +52,7 @@ export default function SignupForm() {
         setFormError(errorMessage);
       });
 
-    setIsLoading(false);
+    // setIsLoading(false);
   }
 
   function inputChangeHandler(event) {

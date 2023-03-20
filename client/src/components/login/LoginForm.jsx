@@ -19,6 +19,13 @@ function LoginForm() {
       setIsLoading(false);
       return;
     }
+
+    if (formData.password < 6) {
+      setFormError('Password should be least 6 characters');
+      setIsLoading(false);
+      return;
+    }
+
     setTimeout(() => {
       setFormError(
         'If this is taking a while, please wait a moment. The backend might be booting up'
@@ -72,7 +79,9 @@ function LoginForm() {
             Login
           </button>
         )}
-        <p className='text-red-500 font-bold mt-4'>{formError}</p>
+        <p className='text-red-500 font-bold mt-4' data-cy='form-error'>
+          {formError}
+        </p>
         <p className='my-4'>
           Not part of the All Elite Network?{' '}
           <Link to='/signup'>Sign up here</Link>

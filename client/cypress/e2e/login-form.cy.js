@@ -36,4 +36,10 @@ describe('Login form errors', () => {
     cy.get('[data-cy="form-error"]').contains(/least 6 characters/i);
     cy.get('[data-cy="loading-animation"]').should('not.exist');
   });
+
+  it('Throws an error when no information is provided', () => {
+    cy.get('[data-cy="submit"]').click();
+    cy.get('[data-cy="form-error"]').contains(/fill out all information/i);
+    cy.get('[data-cy="loading-animation"]').should('not.exist');
+  });
 });

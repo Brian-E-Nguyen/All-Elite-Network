@@ -48,6 +48,7 @@ function LoginForm() {
       <form
         onSubmit={submitHandler}
         className='container mx-auto flex flex-col justify-center items-center mt-5 text-center'
+        data-cy='login-form'
       >
         <h1>Login</h1>
         <input
@@ -65,9 +66,11 @@ function LoginForm() {
           onChange={inputChangeHandler}
         />
         {isLoading ? (
-          <Cliploader color='yellow' size={50} />
+          <Cliploader color='yellow' size={50} data-cy='loading-animation' />
         ) : (
-          <button className='w-[70%]'>Login</button>
+          <button className='w-[70%]' data-cy='submit'>
+            Login
+          </button>
         )}
         <p className='text-red-500 font-bold mt-4'>{formError}</p>
         <p className='my-4'>

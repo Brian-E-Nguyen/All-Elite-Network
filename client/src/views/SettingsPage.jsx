@@ -13,7 +13,7 @@ function SettingsPage() {
   function deleteHandler() {
     const email = decodedToken.email;
     axios
-      .delete(`http://localhost:1337/api/auth/${email}`)
+      .delete(`${import.meta.env.VITE_APP_BACKEND_API}/api/auth/${email}`)
       .then(() => {
         localStorage.removeItem('token');
         history.push('/');

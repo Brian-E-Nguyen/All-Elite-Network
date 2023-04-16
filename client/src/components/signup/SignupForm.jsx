@@ -32,11 +32,6 @@ export default function SignupForm() {
       setIsLoading(false);
       return setFormError('Password must be at least 6 characters');
     }
-    setTimeout(() => {
-      setFormError(
-        'If this is taking a while, please wait a moment. The backend might be booting up'
-      );
-    }, 3000);
 
     axios
       .post(
@@ -45,11 +40,17 @@ export default function SignupForm() {
       )
       .then(() => {
         history.push('/featured');
+        setTimeout(() => {
+          setFormError(
+            'If this is taking a while, please wait a moment. The backend might be booting up'
+          );
+        }, 3000);
       })
       .catch((err) => {
         const errorMessage =
           err.response.data.message || 'An unexpected error happend';
         setFormError(errorMessage);
+        setIsLoading(false);
       });
 
     // setIsLoading(false);
@@ -130,7 +131,9 @@ export default function SignupForm() {
             Sign Up
           </button>
         )}
-        <p className='text-red-500 font-bold'>{formError}</p>
+        <p className='text-red-500 font-bold' data-cy='form-error'>
+          {formError}
+        </p>
         <p className='my-4'>
           Already have an account? <Link to='/login'>Login here</Link>
         </p>

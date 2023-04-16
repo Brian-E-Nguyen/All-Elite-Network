@@ -26,3 +26,19 @@ describe('Submit form data', () => {
     });
   });
 });
+
+describe('Signup form errors', () => {
+  beforeEach(() => {
+    cy.visit('/signup');
+  });
+
+  it('Throws an error for duplicate email', () => {
+    cy.get('input[name="email"]').type('foo@bar.baz');
+    cy.get('input[name="password"]').type('fakePassword');
+    cy.get('input[name="retypedPassword"]').type('fakePassword');
+    cy.get('input[name="plan"][value="all-elite"]').click();
+    cy.get('[data-cy="submit"]').click();
+    cy.get('[data-cy="loading-animation"]').should('not.exist');
+    cy.get('[data-cy="form-error"]').contains(/email already exists/i);
+  });
+});

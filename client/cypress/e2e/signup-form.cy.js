@@ -14,5 +14,15 @@ describe('Submit form data', () => {
     cy.get('input[name="plan"][value="all-elite"]').click();
     cy.get('[data-cy="submit"]').click();
     cy.get('[data-cy="loading-animation"]').should('exist');
+
+    cy.url().should('include', '/login');
+
+    cy.task('deleteUser', {
+      query: {
+        email: 'test@email.com',
+      },
+      operation: 'deleteOne',
+      collection: 'users',
+    });
   });
 });

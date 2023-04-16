@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   dotenv.config({ path: '../.env.development.local' });
   const mongoUrl =
-    'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2';
+    'mongodb://127.0.0.1:27017/all-elite-network?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2';
   mongoose.connect(mongoUrl);
 }
 

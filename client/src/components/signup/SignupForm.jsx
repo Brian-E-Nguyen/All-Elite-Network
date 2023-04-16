@@ -65,6 +65,7 @@ export default function SignupForm() {
       <form
         onSubmit={submitHandler}
         className='container mx-auto flex flex-col justify-center items-center mt-5 text-center'
+        data-cy='signup-form'
       >
         <h1>Sign Up</h1>
         <input
@@ -123,9 +124,11 @@ export default function SignupForm() {
           </label>
         </div>
         {isLoading ? (
-          <Cliploader color='yellow' size={50} />
+          <Cliploader color='yellow' size={50} data-cy='loading-animation' />
         ) : (
-          <button className='w-[70%] my-4'>Sign Up</button>
+          <button className='w-[70%] my-4' data-cy='submit'>
+            Sign Up
+          </button>
         )}
         <p className='text-red-500 font-bold'>{formError}</p>
         <p className='my-4'>
